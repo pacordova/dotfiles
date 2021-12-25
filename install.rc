@@ -1,0 +1,52 @@
+#!/usr/bin/env rc
+
+# wd->dotfiles
+cd `{dirname $0}
+
+# vars
+dotfiles=`{pwd}
+vimpath=$HOME/.config/vim
+flist=(
+    xinitrc
+    tmux.conf
+    rcrc
+    vimrc
+    config/user-dirs.dirs
+    inputrc
+)
+vilist=(
+    tpope/vim-commentary
+    weakish/rcshell.vim
+)
+
+# uninstall/clean
+fn Clean {
+    for(f in $flist)
+        rm $HOME/.$f >[2] /dev/null;
+
+    rm -rf $vimpath >[2] /dev/null
+}
+
+# install
+fn Install {
+    for(f in $flist)
+        cp -f $dotfiles/`{basename $f} $HOME/.$f;
+}
+
+# setup vim
+fn Vim {
+    mkdir -p $vimpath/autoload $vimpath/bundle
+    curl -LSso $vimpath/autoload/pathogen.vim http://tpo.pe/pathogen.vim
+    for(p in $vilist) {
+        git clone \
+            --recurse-submodules \
+            --depth=1 \
+            http://github.com/$p $vimpath/bundle/$p
+    }
+}
+
+# do the install
+if(~ $#* 0)
+    Clean && Install && Vim
+if not
+    $1

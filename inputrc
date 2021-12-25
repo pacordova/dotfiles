@@ -1,0 +1,15 @@
+$include /etc/inputrc
+
+# unbind annoying
+"\C-p": nop
+
+# tab completion
+#"\C-m": accept-line
+#"\t": "`{sk}\C-m"
+
+# colors
+set colored-stats On
+set colored-completion-prefix On
+
+# for st del character
+set enable-keypad on
