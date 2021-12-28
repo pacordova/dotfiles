@@ -4,15 +4,10 @@ _red='\001\e[1;36m\002'
 _white='\001\e[0m\002'
 _blue='\001\e[1;34m\002'
 
-# directory stack
+# dirstack
 fn dirs { printf '%s\n' $dirs | nl -v0 -n'ln' }
-fn popd { n=$1 *=$dirs && shift $n && dirs=$* }
-fn cd {
-    d=`{realpath $1}
-    if(test ! -d $d) printf 'error: bad dirname'
-    if not dirs=($d $dirs)
-    builtin cd $1
-}
+fn popd { n=$1{*=$dirs;shift $n;dirs=$*} }
+fn cd { *=`{realpath $1} if(test -d $1) dirs=($1 $dirs) }
 
 # other functions
 fn sudo{ su -c $"* }
@@ -30,7 +25,7 @@ fn prompt {
     # clean dir stack every command
     dirs=`{ dirs | uniq2 }
 
-    builtin cd $dirs(1) >[2] /dev/null
+    builtin cd $dirs(1)
 
     # set the prompt
     if(~ $#DISPLAY 0)
