@@ -15,7 +15,7 @@ fn chroot{ firejail --chroot=$1 --shell=/bin/sh }
 fn source{ if(test -x $1) . $1 }
 fn du1 { du -ahxd1 }
 fn txz{ tar c -I'xz -9 -T0' -f $1.txz $1 }
-fn UNIQ { awk '!($0 in a){a[$0];print $0}' }
+fn unique { awk '!($0 in a){a[$0];print $0}' }
 
 # prompt
 fn prompt {
@@ -23,7 +23,7 @@ fn prompt {
     fn sigint { stty sane }
 
     # clean dir stack every command
-    dirs=`{ printf '%s\n' $dirs | UNIQ }
+    dirs=`{ printf '%s\n' $dirs | unique }
 
     builtin cd $dirs(1)
 
@@ -45,7 +45,7 @@ fn prompt {
 
 dirs=($home) # default dirs
 LANG=en_US.UTF-8
-SHELL=/bin/rc
+SHELL=/usr/local/bin/rc
 PATH=~/.local/bin:$PATH
 VISUAL=vim
 EDITOR=vim
