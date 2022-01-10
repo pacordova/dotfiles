@@ -28,12 +28,12 @@ fn cd {
 # probably should hook this somehow
 fn git {
      if(! ~ $1 prompt)
-        /usr/bin/git $*
+        builtin git $*
 
     builtin cd $dirs(1)
 
     >[2=] {
-        if(~ `{/usr/bin/git status} *Changes*)
+        if(~ `{builtin git status} *Changes*)
             prompt=`{echo -ne $_blue^'λ'^$_white}^'* '
     if not
         prompt=`{echo -ne $_blue^'λ'^$_white}^' '
