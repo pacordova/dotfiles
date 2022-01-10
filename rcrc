@@ -4,48 +4,46 @@ _red='\001\e[1;36m\002'
 _white='\001\e[0m\002'
 _blue='\001\e[1;34m\002'
 
-# dirstack
-fn dirs { printf '%s\n' $dirs | nl -v0 -n'ln' }
-fn popd { n=$1{*=$dirs;shift $n;dirs=$*} }
-fn cd { *=`{realpath $1} if(test -d $1) dirs=($1 $dirs) }
-
-# other functions
+# misc functions
 fn sudo{ su -c $"* }
-fn chroot{ firejail --chroot=$1 --shell=/bin/sh }
-fn source{ if(test -x $1) . $1 }
-fn du1 { du -ahxd1 }
-fn txz{ tar c -I'xz -9 -T0' -f $1.txz $1 }
-fn unique { awk '!($0 in a){a[$0];print $0}' }
+fn chroot{firejail '--chroot='$1 '--shell='/bin/sh}
+fn du1 {du -ahxd1}
+fn unique {awk '!($0 in a){a[$0];print $0}'}
 
-# prompt
-fn prompt {
-    # fix bugs
-    fn sigint { stty sane }
+# dirstack
+fn dirs {printf '%s\n' $dirs | nl -v0 -n'ln'}
+fn popd {n=$1{*=$dirs;shift $n;dirs=$*}}
 
-    # clean dir stack every command
-    dirs=`{ printf '%s\n' $dirs | unique }
+fn cd {
+    >[2=] *=`{realpath $1}
+
+    # clean dirstack
+    if(test -d $1)
+        dirs=`{ printf '%s\n' ($1 $dirs) | unique }
+
+    git prompt
+}
+
+# git prompt
+# probably should hook this somehow
+fn git {
+     if(! ~ $1 prompt)
+        /usr/bin/git $*
 
     builtin cd $dirs(1)
 
-    # set the prompt
-    if(~ $#DISPLAY 0)
-        lprompt='%%'
+    >[2=] {
+        if(~ `{/usr/bin/git status} *Changes*)
+            prompt=`{echo -ne $_blue^'λ'^$_white}^'* '
     if not
-        lprompt='\u03bb'
-
-    # set the git warning
-    if(~ `{git status >[2] /dev/null} Changes*)
-        suffix='* '
-    if not
-        suffix=' '
-
-    # set the left prompt
-    prompt=`{printf $_blue^$lprompt^$_white}^$suffix
+        prompt=`{echo -ne $_blue^'λ'^$_white}^' '
+    }
 }
 
+# env
 dirs=($home) # default dirs
 LANG=en_US.UTF-8
-SHELL=/usr/local/bin/rc
+SHELL=/usr/bin/rc
 PATH=~/.local/bin:$PATH
 VISUAL=vim
 EDITOR=vim
@@ -54,7 +52,9 @@ LESS=eFRX
 CFLAGS='-pipe -Os -fstack-protector-strong -fstack-clash-protection'
 CXXFLAGS=$CFLAGS
 PREFIX=$HOME/.local
-PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/lib/pkgconfig
+PKG_CONFIG_PATH=/usr/lib/pkgconfig:$"PKG_CONFIG_PATH
 SSH_ASKPASS=()
 
-source $home/.extras.rc
+# init
+>[2=] . $home/.extras.rc
+cd
