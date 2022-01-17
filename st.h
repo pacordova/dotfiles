@@ -1,26 +1,29 @@
 //font
 static char *font = "CodeNewRoman NF:size=12:antialias=true:autohint=false;hintstyle=3;rgba=1";
 
-//spaceduck
+//colors (spacemacs theme from base16)
 static const char *colorname[] = {
-   	//8 normal colors
-    "#000000", "#e33400", "#5ccc96", "#b3a1e6",
-    "#00a3cc", "#f2ce00", "#7a5ccc", "#686f9a",
-    //8 bright colors
-    "#686f9a", "#e33400", "#5ccc96", "#b3a1e6",
-    "#00a3cc", "#f2ce00", "#7a5ccc", "#f0f1ce",
-
-    [255] = 0,
-
-   "#ecf0c1", //256 -> reverse cursor
-   "#ecf0c1", //257 -> cursor
-   "#ecf0c1", //258 -> foreground
-   "#0f111b", //259 -> background
- };
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 257;
-unsigned int defaultrcs = 256;
+  "#1f2022", /* base00 */
+  "#f2241f", /* base08 */
+  "#67b11d", /* base0B */
+  "#b1951d", /* base0A */
+  "#4f97d7", /* base0D */
+  "#a31db1", /* base0E */
+  "#2d9574", /* base0C */
+  "#a3a3a3", /* base05 */
+  "#585858", /* base03 */
+  "#ffa500", /* base09 */
+  "#282828", /* base01 */
+  "#444155", /* base02 */
+  "#b8b8b8", /* base04 */
+  "#e8e8e8", /* base06 */
+  "#b03060", /* base0F */
+  "#f8f8f8", /* base07 */
+};
+unsigned int defaultfg = 7;
+unsigned int defaultbg = 0;
+static unsigned int defaultcs = 13;
+static unsigned int defaultrcs = 0;
 
 //input lag in newer st
 static double minlatency = 1;
