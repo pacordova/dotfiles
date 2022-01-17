@@ -3,6 +3,7 @@
 _red='\001\e[1;36m\002'
 _white='\001\e[0m\002'
 _blue='\001\e[1;34m\002'
+_green='\001\e[1;32m\002'
 
 # misc functions
 fn sudo{ su -c $"* }
@@ -34,9 +35,9 @@ fn git {
 
     >[2=] {
         if(~ `{builtin git status} *Changes*)
-            prompt=`{echo -ne $_blue^'λ'^$_white}^'* '
+            prompt=`{echo -ne $_green^'λ'}^'* '
     if not
-        prompt=`{echo -ne $_blue^'λ'^$_white}^' '
+        prompt=`{echo -ne $_green^'λ'}^' '
     }
 }
 
