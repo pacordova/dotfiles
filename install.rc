@@ -17,6 +17,7 @@ flist=( \
 vilist=( \
     tpope/vim-commentary \
     weakish/rcshell.vim \
+    liuchengxu/space-vim-dark \
 )
 
 # uninstall/clean
