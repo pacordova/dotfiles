@@ -35,9 +35,9 @@ fn git {
 
     >[2=] {
         if(~ `{builtin git status} *Changes*)
-            prompt=`{echo -ne $_green^'λ'}^'* '
+            prompt=`{echo -ne $_green^'λ'^$_white}^'* '
     if not
-        prompt=`{echo -ne $_green^'λ'}^' '
+        prompt=`{echo -ne $_green^'λ'^$_white}^' '
     }
 }
 
