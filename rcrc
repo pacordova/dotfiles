@@ -14,7 +14,6 @@ fn unique {awk '!($0 in a){a[$0];print $0}'}
 fn dirs {printf '%s\n' $dirs | nl -v0 -n'ln'}
 fn popd {n=$1{*=$dirs;shift $n;dirs=$*}}
 fn ls {builtin ls --color $*}
-
 fn cd {
     >[2=] *=`{realpath $1}
 
@@ -25,7 +24,6 @@ fn cd {
     builtin cd $dirs(1)
     gitprompt
 }
-
 fn gitprompt {
     >[2=] {
         if(~ `{git status} *Changes*)
@@ -35,8 +33,10 @@ fn gitprompt {
     }
 }
 
+
 # env
 dirs=($home) # default dirs
+prompt=`{echo -ne $promptcolor^'λ'^$inputcolor}^' '
 LANG=en_US.UTF-8
 SHELL=/usr/bin/rc
 PATH=~/.local/bin:$PATH
