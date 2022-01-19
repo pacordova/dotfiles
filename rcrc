@@ -1,6 +1,6 @@
 #!/usr/bin/env rc
 
-rootcolor='\001\e[1;36m\002'
+rootcolor='\001\e[1;35m\002'
 inputcolor='\001\e[0m\002'
 promptcolor='\001\e[1;33m\002'
 
