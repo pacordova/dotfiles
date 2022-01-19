@@ -14,7 +14,7 @@ static const char *colorname[] = {
     "#ecf0c1", // 256 -> reverse cursor
     "#ecf0c1", // 257 -> cursor
     "#ecf0c1", // 258 -> foreground
-    "#1f212b", // 259 -> background
+    "#262831", // 259 -> background
 };
 
 //other cols
