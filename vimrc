@@ -5,7 +5,7 @@ execute pathogen#infect()
 
 "colors
 syntax on
-colorscheme space-vim-dark
+colorscheme default
 
 "disable backup stuff
 set nobackup

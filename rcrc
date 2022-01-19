@@ -1,9 +1,8 @@
 #!/usr/bin/env rc
 
-_red='\001\e[1;36m\002'
-_white='\001\e[0m\002'
-_blue='\001\e[1;34m\002'
-_green='\001\e[1;32m\002'
+rootcolor='\001\e[1;36m\002'
+inputcolor='\001\e[0m\002'
+promptcolor='\001\e[1;33m\002'
 
 # misc functions
 fn sudo{ su -c $"* }
@@ -14,6 +13,7 @@ fn unique {awk '!($0 in a){a[$0];print $0}'}
 # dirstack
 fn dirs {printf '%s\n' $dirs | nl -v0 -n'ln'}
 fn popd {n=$1{*=$dirs;shift $n;dirs=$*}}
+fn ls {builtin ls --color $*}
 
 fn cd {
     >[2=] *=`{realpath $1}
@@ -35,9 +35,9 @@ fn git {
 
     >[2=] {
         if(~ `{builtin git status} *Changes*)
-            prompt=`{echo -ne $_green^'λ'^$_white}^'* '
+            prompt=`{echo -ne $promptcolor^'λ'^$inputcolor}^'* '
     if not
-        prompt=`{echo -ne $_green^'λ'^$_white}^' '
+        prompt=`{echo -ne $promptcolor^'λ'^$inputcolor}^' '
     }
 }
 

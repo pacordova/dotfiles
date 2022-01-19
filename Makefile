@@ -5,9 +5,8 @@ flist= \
 vilist= \
 	tpope/vim-commentary \
 	weakish/rcshell.vim \
-	liuchengxu/space-vim-dark
 
-install: all vim
+install: clean all vim
 
 all:
 	for f in ${flist}; do install -D `basename $$f` ${HOME}/.$$f; done
