@@ -22,19 +22,17 @@ fn cd {
     if(test -d $1)
         dirs=`{ printf '%s\n' ($1 $dirs) | unique }
 
-    git prompt
+    gitprompt
 }
 
-# git prompt
-# probably should hook this somehow
-fn git {
+fn gitprompt {
      if(! ~ $1 prompt)
-        builtin git $*
+        git $*
 
     builtin cd $dirs(1)
 
     >[2=] {
-        if(~ `{builtin git status} *Changes*)
+        if(~ `{git status} *Changes*)
             prompt=`{echo -ne $promptcolor^'λ'^$inputcolor}^'* '
     if not
         prompt=`{echo -ne $promptcolor^'λ'^$inputcolor}^' '
