@@ -1,28 +1,36 @@
-vimpath=${HOME}/.config/vim
-flist= \
+VIMPATH=${HOME}/.config/vim
+FLIST= \
 	xinitrc tmux.conf rcrc vimrc \
 	config/user-dirs.dirs inputrc
-vilist= \
+VILIST= \
 	tpope/vim-commentary \
 	weakish/rcshell.vim \
 
-install: clean all vim
+INSTALL=install -D `basename $@` ${HOME}/.$@
+CLEAN=rm ${HOME}/.$@ 2>/dev/null
 
-all:
-	for f in ${flist}; do install -D `basename $$f` ${HOME}/.$$f; done
+.PHONY: ${FLIST} ${VILIST} pathogen
 
-vim:
-	mkdir -p ${vimpath}/autoload ${vimpath}/bundle
-	curl -LSso ${vimpath}/autoload/pathogen.vim 'http://tpo.pe/pathogen.vim'
-	for p in ${vilist}; do \
-		git clone \
-			--recurse-submodules \
-		 	--depth=1 \
- 			http://github.com/$$p \
-			${vimpath}/bundle/`basename $$p` \
-			2>/dev/null; \
-	done
+all: clean install
+
+${FLIST}:
+	${COMMAND}
+
+${VILIST}: pathogen
+	git clone\
+		--recurse-submodules\
+	 	--depth=1\
+ 		http://github.com/$@\
+		${VIMPATH}/bundle/`basename $@`\
+		2>/dev/null;\
+
+pathogen:
+	mkdir -p ${VIMPATH}/autoload ${VIMPATH}/bundle
+	curl -LSso ${VIMPATH}/autoload/pathogen.vim 'http://tpo.pe/pathogen.vim'
 
 clean:
-	for f in ${flist}; do rm ${HOME}/.$$f 2>/dev/null; done
-	rm -rf ${vimpath} 2>/dev/null
+	make COMMAND='${CLEAN}' ${FLIST}
+	rm -rf ${VIMPATH} 2>/dev/null
+
+install:
+	make COMMAND='${INSTALL}' ${FLIST} ${VILIST}
