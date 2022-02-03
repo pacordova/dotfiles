@@ -30,11 +30,11 @@ snarf:
 	install -D `basename ${TARG}` ${HOME}/.${TARG}
 
 rm:
-	rm ${HOME}/.${TARG}
+	rm ${HOME}/.${TARG} || true
 
 uninstall:
 	make λ=rm ${FLIST}
-	rm -rf ${VIMPATH} 2>/dev/null || true
+	rm -rf ${VIMPATH} || true
 
 install:
 	make λ=snarf ${FLIST} ${VILIST}
