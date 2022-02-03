@@ -6,15 +6,13 @@ VILIST= \
 	tpope/vim-commentary \
 	weakish/rcshell.vim \
 
-INSTALL=install -D `basename $$@` ${HOME}/.$$@
-CLEAN=rm ${HOME}/.$$@ 2>/dev/null || true
 
 .PHONY: ${FLIST} ${VILIST} pathogen
 
-all: clean install
+all: uninstall install
 
 ${FLIST}:
-	${COMMAND}
+	make TARG=$@ ${λ}
 
 ${VILIST}: pathogen
 	git clone\
@@ -28,9 +26,15 @@ pathogen:
 	mkdir -p ${VIMPATH}/autoload ${VIMPATH}/bundle
 	curl -LSso ${VIMPATH}/autoload/pathogen.vim 'http://tpo.pe/pathogen.vim'
 
-clean:
-	make COMMAND='${CLEAN}' ${FLIST}
+snarf:
+	install -D `basename ${TARG}` ${HOME}/.${TARG}
+
+rm:
+	rm ${HOME}/.${TARG}
+
+uninstall:
+	make λ=rm ${FLIST}
 	rm -rf ${VIMPATH} 2>/dev/null || true
 
 install:
-	make COMMAND='${INSTALL}' ${FLIST} ${VILIST}
+	make λ=snarf ${FLIST} ${VILIST}
