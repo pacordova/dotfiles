@@ -6,8 +6,8 @@ VILIST= \
 	tpope/vim-commentary \
 	weakish/rcshell.vim \
 
-INSTALL=install -D `basename $@` ${HOME}/.$@
-CLEAN=rm ${HOME}/.$@ 2>/dev/null
+INSTALL=install -D `basename $$@` ${HOME}/.$$@
+CLEAN=rm ${HOME}/.$$@ 2>/dev/null || true
 
 .PHONY: ${FLIST} ${VILIST} pathogen
 
@@ -30,7 +30,7 @@ pathogen:
 
 clean:
 	make COMMAND='${CLEAN}' ${FLIST}
-	rm -rf ${VIMPATH} 2>/dev/null
+	rm -rf ${VIMPATH} 2>/dev/null || true
 
 install:
 	make COMMAND='${INSTALL}' ${FLIST} ${VILIST}
