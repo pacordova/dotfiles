@@ -26,15 +26,8 @@ pathogen:
 	mkdir -p ${VIMPATH}/autoload ${VIMPATH}/bundle
 	curl -LSso ${VIMPATH}/autoload/pathogen.vim 'http://tpo.pe/pathogen.vim'
 
-snarf:
-	install -D `basename ${TARG}` ${HOME}/.${TARG}
-
-rm:
-	rm ${HOME}/.${TARG} || true
-
 uninstall:
-	make λ=rm ${FLIST}
-	rm -rf ${VIMPATH} || true
+	{for f in ${FLIST};do rm $$f;done;rm -rf ${VIMPATH}} || true
 
 install:
-	make λ=snarf ${FLIST} ${VILIST}
+	for f in ${FLIST}; do install -D `basename $$f` ${HOME}/.$$f; done
