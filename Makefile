@@ -2,7 +2,7 @@ VIMPATH=${HOME}/.config/vim
 FLIST=xinitrc tmux.conf rcrc vimrc config/user-dirs.dirs inputrc
 VILIST=tpope/vim-commentary weakish/rcshell.vim
 
-.PHONY: ${FLIST} ${VILIST} pathogen
+.PHONY: pathogen
 
 all: uninstall install
 
