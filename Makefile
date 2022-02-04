@@ -1,4 +1,5 @@
 VIMPATH=${HOME}/.config/vim
+STPATH=${HOME}/.git/st
 FLIST=xinitrc tmux.conf rcrc vimrc config/user-dirs.dirs inputrc
 VILIST=tpope/vim-commentary weakish/rcshell.vim
 
@@ -10,10 +11,16 @@ pathogen:
 	mkdir -p ${VIMPATH}/autoload ${VIMPATH}/bundle
 	curl -LSso ${VIMPATH}/autoload/pathogen.vim http://tpo.pe/pathogen.vim
 
-uninstall:
-	for f in ${FLIST};do rm ${HOME}/.$$f;done;rm -rf ${VIMPATH} || true
+st:
+	git clone --depth=1 https://git.suckless.org/st ${HOME}/.git/st
+	install st.h ${HOME}/.git/st/config.h
+	make PREFIX=${HOME}/.local -C ${HOME}/.git/st install
 
-install: pathogen
+uninstall:
+	for f in ${FLIST}; do rm -f ${HOME}/.$$f; done
+	rm -rf ${VIMPATH} ${STPATH}
+
+install: pathogen st
 	for f in ${FLIST};do install -D `basename $$f` ${HOME}/.$$f;done
 	for v in ${VILIST}; do\
 		git clone http://github.com/$$v ${VIMPATH}/bundle/`basename $$v`;\
