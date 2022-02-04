@@ -6,7 +6,7 @@ static const char *colorname[] = {
     "#000000", "#e33400", "#5ccc96", "#b3a1e6",
     "#00a3cc", "#f2ce00", "#7a5ccc", "#686f9a",
     // eight bright colors
-    "#686f9a", "#e33400", "#5ccc96", "#b3a1e6",
+    "#ecf0c1", "#e33400", "#5ccc96", "#b3a1e6",
     "#00a3cc", "#f2ce00", "#7a5ccc", "#f0f1ce",
 
     [255] = 0,
@@ -14,7 +14,7 @@ static const char *colorname[] = {
     "#ecf0c1", // 256 -> reverse cursor
     "#ecf0c1", // 257 -> cursor
     "#ecf0c1", // 258 -> foreground
-    "#262831", // 259 -> background
+    "#31323b", // 259 -> background
 };
 
 //other cols
