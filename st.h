@@ -4,7 +4,7 @@ static char *font = "CodeNewRoman NF:size=12:antialias=true:autohint=false;hints
 //terminal colors
 static const char *colorname[] = {
     //normal colors
-    "#0C0D08", "#ea6f91", "#9bced7", "#f1ca93",
+    "#232136", "#ea6f91", "#9bced7", "#f1ca93",
     "#018993", "#c3a5e6", "#eabbb9", "#faebd7",
 
     //bright colors
@@ -13,7 +13,7 @@ static const char *colorname[] = {
 
     [255] = 0,
 
-    "#0C0D08", "#D8D8D8", "#D8D8D8",
+    "#232136", "#D8D8D8", "#D8D8D8",
 };
 
 //foreground, background, cursor, reverse cursor

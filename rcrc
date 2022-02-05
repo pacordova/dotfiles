@@ -1,8 +1,7 @@
 #!/usr/bin/env rc
 
-rootcolor='\001\e[1;35m\002'
 inputcolor='\001\e[0m\002'
-promptcolor='\001\e[1;32m\002'
+promptcolor='\001\e[1;35m\002'
 
 # misc functions
 fn sudo{ su -c $"* }
