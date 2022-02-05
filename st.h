@@ -1,27 +1,26 @@
 //font
 static char *font = "CodeNewRoman NF:size=12:antialias=true:autohint=false;hintstyle=3;rgba=1";
 
+//terminal colors
 static const char *colorname[] = {
-    // eight normal colors
-    "#000000", "#e33400", "#5ccc96", "#b3a1e6",
-    "#00a3cc", "#f2ce00", "#7a5ccc", "#686f9a",
-    // eight bright colors
-    "#ecf0c1", "#e33400", "#5ccc96", "#b3a1e6",
-    "#00a3cc", "#f2ce00", "#7a5ccc", "#f0f1ce",
+	//normal colors
+    "#0C0D08", "#ea6f91", "#9bced7", "#f1ca93",
+    "#018993", "#c3a5e6", "#eabbb9", "#faebd7",
 
-    [255] = 0,
+	//bright colors
+	"#D8D8D8", "#ea6f91", "#9bced7", "#f1ca93",
+    "#018993", "#c3a5e6", "#eabbb9", "#faebd7",
 
-    "#ecf0c1", // 256 -> reverse cursor
-    "#ecf0c1", // 257 -> cursor
-    "#ecf0c1", // 258 -> foreground
-    "#31323b", // 259 -> background
+	[255] = 0,
+
+	"#0C0D08", "#D8D8D8", "#D8D8D8",
 };
 
-//other cols
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 257;
-unsigned int defaultrcs = 256;
+//foreground, background, cursor, reverse cursor
+unsigned int defaultbg = 256;
+unsigned int defaultfg = 257;
+static unsigned int defaultcs = 258;
+static unsigned int defaultrcs = 258;
 
 //input lag in newer st
 static double minlatency = 1;
