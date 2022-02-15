@@ -20,7 +20,7 @@ uninstall:
 	for f in ${FLIST}; do rm -f ${HOME}/.$$f; done
 	rm -rf ${VIMPATH} ${STPATH}
 
-install: pathogen st
+install: pathogen 
 	for f in ${FLIST};do install -D `basename $$f` ${HOME}/.$$f;done
 	for v in ${VILIST}; do\
 		git clone http://github.com/$$v ${VIMPATH}/bundle/`basename $$v`;\
