@@ -8,7 +8,7 @@ super + shift + Return
 
 # program launcher
 super + p
-    dmenu_run -fn 'CodeNewRoman NF-13'
+    dmenu_run -fn 'CodeNewRoman NF-12' -l 10
 
 
 # make sxhkd reload its configuration files:
