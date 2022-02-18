@@ -1,6 +1,6 @@
 VIMPATH=${HOME}/.config/vim
 STPATH=${HOME}/.git/st
-FLIST=xinitrc tmux.conf rcrc vimrc config/user-dirs.dirs inputrc
+FLIST=xinitrc tmux.conf rcrc vimrc config/user-dirs.dirs inputrc config/bspwm/bspwmrc config/sxhkd/sxhkdrc
 VILIST=tpope/vim-commentary weakish/rcshell.vim
 
 .PHONY: pathogen
@@ -20,7 +20,7 @@ uninstall:
 	for f in ${FLIST}; do rm -f ${HOME}/.$$f; done
 	rm -rf ${VIMPATH} ${STPATH}
 
-install: pathogen 
+install: pathogen
 	for f in ${FLIST};do install -D `basename $$f` ${HOME}/.$$f;done
 	for v in ${VILIST}; do\
 		git clone http://github.com/$$v ${VIMPATH}/bundle/`basename $$v`;\
