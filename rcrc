@@ -48,6 +48,7 @@ CXXFLAGS=$CFLAGS
 PREFIX=$HOME/.local
 PKG_CONFIG_PATH=/usr/lib/pkgconfig:$"PKG_CONFIG_PATH
 SSH_ASKPASS=()
+path=($home/.local/bin /usr/sbin /sbin /usr/bin /bin)
 
 # init
 >[2=] . $home/.extras.rc
