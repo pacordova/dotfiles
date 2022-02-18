@@ -16,10 +16,3 @@ bspc rule -a firefox desktop='^2'
 bspc rule -a mpv state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-
-# init
-xfsettingsd
-Thunar --daemon
-xfce-panel -d
-xfdesktop -D
-
