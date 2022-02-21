@@ -8,15 +8,15 @@ unsigned int alpha = 0xdf;
 static const char *colorname[] = {
     //normal colors
     "#232136", "#ea9a97", "#9ccfd8", "#f6c177",
-    "#3e8fb0", "#eb6f92", "#c4a7e7", "#e0def4",
+    "#3e8fb0", "#eb6f92", "#c4a7e7", "#d8d8d8",
 
     //bright colors
     "#232136", "#ea9a97", "#9ccfd8", "#f6c177",
-    "#3e8fb0", "#eb6f92", "#c4a7e7", "#e0def4",
+    "#3e8fb0", "#eb6f92", "#c4a7e7", "#d8d8d8",
 
 	[255] = 0,
 
-    "#232136", "#e0def4", "#e0def4",
+    "#232136", "#e0def4", "#d8d8d8",
 };
 
 //foreground, background, cursor, reverse cursor
