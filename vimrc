@@ -5,7 +5,7 @@ execute pathogen#infect()
 
 "colors
 syntax on
-colorscheme default
+colorscheme rose-pine-dark
 
 "disable backup stuff
 set nobackup
