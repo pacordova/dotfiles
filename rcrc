@@ -1,7 +1,7 @@
-#!/usr/bin/env rc
+#!/usr/bin/rc
 
 inputcolor='\001\e[0m\002'
-promptcolor='\001\e[1;35m\002'
+promptcolor='\001\e[1;36m\002'
 
 # misc functions
 fn sudo{ su -c $"* }
@@ -50,6 +50,4 @@ PKG_CONFIG_PATH=/usr/lib/pkgconfig:$"PKG_CONFIG_PATH
 SSH_ASKPASS=()
 path=($home/.local/bin /usr/sbin /sbin /usr/bin /bin)
 
-# init
->[2=] . $home/.extras.rc
 cd
