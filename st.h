@@ -7,16 +7,16 @@ unsigned int alpha = 0xdf;
 
 static const char *colorname[] = {
     //normal colors
-    "#191724", "#ea6f91", "#9bced7", "#f1ca93",
-    "#018993", "#c3a5e6", "#eabbb9", "#faebd7",
+    "#9893a5", "#d7827e", "#56949f", "#ea9d34",
+    "#286983", "#b4637a", "#907aa9", "#f2e9e1",
 
     //bright colors
-    "#D8D8D8", "#ea6f91", "#9bced7", "#f1ca93",
-	"#018993", "#c3a5e6", "#eabbb9", "#faebd7",
+    "#797593", "#ea6f91", "#9bced7", "#f1ca93",
+	"#018993", "#c3a5e6", "#eabbb9", "#fffaf3",
 
 	[255] = 0,
 
-    "#191724", "#D8D8D8", "#D8D8D8",
+    "#faf4ed, "#575279", "#f4ede8",
 };
 
 //foreground, background, cursor, reverse cursor
@@ -24,8 +24,6 @@ unsigned int defaultbg = 256;
 unsigned int defaultfg = 257;
 unsigned int defaultcs = 258;
 unsigned int defaultrcs = 258;
-
-//foreground, background, cursor, reverse cursor
 
 //input lag in newer st
 static double minlatency = 1;
