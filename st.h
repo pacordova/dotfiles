@@ -7,16 +7,16 @@ unsigned int alpha = 0xdf;
 
 static const char *colorname[] = {
     //normal colors
-    "#9893a5", "#d7827e", "#56949f", "#ea9d34",
+    "#575279", "#d7827e", "#56949f", "#ea9d34",
     "#286983", "#b4637a", "#907aa9", "#f2e9e1",
 
     //bright colors
-    "#797593", "#ea6f91", "#9bced7", "#f1ca93",
-	"#018993", "#c3a5e6", "#eabbb9", "#fffaf3",
+    "#575279", "#d7827e", "#56949f", "#ea9d34",
+    "#286983", "#b4637a", "#907aa9", "#fffaf3",
 
 	[255] = 0,
 
-    "#faf4ed, "#575279", "#f4ede8",
+    "#faf4ed", "#575279", "#575279",
 };
 
 //foreground, background, cursor, reverse cursor
@@ -103,7 +103,7 @@ char *termname = "st-256color";
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 6;
+static unsigned int cursorshape = 2;
 
 /*
  * Default columns and rows numbers

@@ -4,7 +4,7 @@ FLIST=xinitrc tmux.conf rcrc vimrc inputrc\
 	  config/user-dirs.dirs\
 	  config/bspwm/bspwmrc\
 	  config/sxhkd/sxhkdrc
-VILIST=tpope/vim-commentary weakish/rcshell.vim iandwelker/rose-pine-vim
+VILIST=tpope/vim-commentary weakish/rcshell.vim
 
 .PHONY: pathogen
 
@@ -15,9 +15,10 @@ pathogen:
 	curl -LSso ${VIMPATH}/autoload/pathogen.vim http://tpo.pe/pathogen.vim
 
 st:
+	rm -rf ${HOME}/.git/st
 	git clone --depth=1 https://git.suckless.org/st ${HOME}/.git/st
 	install st.h ${HOME}/.git/st/config.h
-	make -C ${HOME}/.git/st
+	make -C ${HOME}/.git/st install PREFIX=${PREFIX}
 
 uninstall:
 	for f in ${FLIST}; do rm -f ${HOME}/.$$f; done
