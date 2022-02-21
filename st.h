@@ -4,16 +4,15 @@ static char *font = "CodeNewRoman NF:size=12:antialias=true:autohint=false;hints
 //terminal colors
 static const char *colorname[] = {
     //normal colors
-    "#232136", "#ea6f91", "#9bced7", "#f1ca93",
-    "#018993", "#c3a5e6", "#eabbb9", "#faebd7",
-
+    "faf4ed", "fffaf3", "f2e9de", "9893a5",
+    "6e6a86", "575279", "555169", "26233a",
     //bright colors
-    "#D8D8D8", "#ea6f91", "#9bced7", "#f1ca93",
-    "#018993", "#c3a5e6", "#eabbb9", "#faebd7",
+    "1f1d2e", "b4637a", "ea9d34", "d7827e",
+    "286983", "56949f", "907aa9", "c5c3ce",
 
     [255] = 0,
 
-    "#232136", "#D8D8D8", "#D8D8D8",
+    "faf4ed", "1f1d2e", "1f1d2e",
 };
 
 //foreground, background, cursor, reverse cursor
