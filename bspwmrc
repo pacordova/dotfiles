@@ -18,5 +18,8 @@ bspc rule -a firefox desktop='^2'
 bspc rule -a mpv state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a xfce4-panel layer=above
 
+feh --bg-scale $HOME/img/wp.png &
+xfce4-panel -d &
 pnmixer &
