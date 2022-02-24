@@ -23,3 +23,5 @@ bspc rule -a xfce4-panel layer=above
 feh --bg-scale $HOME/img/wp.png &
 xfce4-panel -d &
 pnmixer &
+st &
+firefox &
