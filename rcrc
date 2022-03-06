@@ -37,7 +37,6 @@ dirs=($home) # default dirs
 prompt=`{echo -ne $promptcolor^'λ'^$inputcolor}^' '
 LANG=en_US.UTF-8
 SHELL=/usr/bin/rc
-PATH=~/.local/bin:$PATH
 VISUAL=vim
 EDITOR=vim
 TERM=xterm-256color
@@ -47,6 +46,8 @@ CXXFLAGS=$CFLAGS
 PREFIX=$HOME/.local
 PKG_CONFIG_PATH=/usr/lib/pkgconfig:$"PKG_CONFIG_PATH
 SSH_ASKPASS=()
-path=($home/.local/bin /usr/sbin /sbin /usr/bin /bin)
+path=($home/.local/bin /usr/local/bin /usr/sbin /usr/bin /sbin /bin)
+PATH=$home/.local/bin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
 
 cd

@@ -7,7 +7,7 @@ ln -sf /tmp/$USER $HOME/.cache
 
 # ENVIRONMENT
 source /home/pac/.config/user-dirs.dirs
-export PATH=/home/pac/.local/bin:/usr/sbin:/sbin:/usr/bin:/bin
+PATH=$HOME/.local/bin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export XCURSOR_THEME=Adwaita
 export XCURSOR_SIZE=16
 
