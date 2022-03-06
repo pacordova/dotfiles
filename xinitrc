@@ -1,11 +1,6 @@
 #!/bin/sh
 
-# set up cache on tmpfs ram
-rm -rf $HOME/.cache
-mkdir -p /tmp/$USER
-ln -sf /tmp/$USER $HOME/.cache
-
-# ENVIRONMENT
+# env
 source /home/pac/.config/user-dirs.dirs
 PATH=$HOME/.local/bin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export XCURSOR_THEME=Adwaita
