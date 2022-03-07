@@ -2,7 +2,7 @@
 
 # env
 source /home/pac/.config/user-dirs.dirs
-PATH=$HOME/.local/bin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export PATH=$HOME/.local/bin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export XCURSOR_THEME=Adwaita
 export XCURSOR_SIZE=16
 
