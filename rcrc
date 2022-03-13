@@ -36,7 +36,7 @@ fn gitprompt {
 dirs=($home) # default dirs
 prompt=`{echo -ne $promptcolor^'λ'^$inputcolor}^' '
 LANG=en_US.UTF-8
-SHELL=/usr/bin/rc
+SHELL=/bin/rc
 VISUAL=vim
 EDITOR=vim
 TERM=xterm-256color
