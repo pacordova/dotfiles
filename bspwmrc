@@ -21,7 +21,4 @@ bspc rule -a Screenkey manage=off
 bspc rule -a xfce4-panel layer=above
 
 feh --bg-scale $HOME/img/bg.png &
-xfce4-panel -d &
-pnmixer &
 st &
-firefox &
