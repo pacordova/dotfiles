@@ -7,6 +7,7 @@ promptcolor='\001\e[1;36m\002'
 fn chroot{firejail '--chroot='$1 '--shell='/bin/sh}
 fn du1 {du -ahxd1}
 fn unique {awk '!($0 in a){a[$0];print $0}'}
+fn startx { xinit }
 
 # dirstack
 fn dirs {printf '%s\n' $dirs | nl -v0 -n'ln'}
