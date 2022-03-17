@@ -1,7 +1,6 @@
 VIMPATH=${HOME}/.config/vim
 STPATH=${HOME}/.git/st
 FLIST=xinitrc tmux.conf rcrc vimrc inputrc\
-	  config/user-dirs.dirs\
 	  config/bspwm/bspwmrc\
 	  config/sxhkd/sxhkdrc
 VILIST=tpope/vim-commentary weakish/rcshell.vim

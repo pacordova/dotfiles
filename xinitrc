@@ -1,7 +1,6 @@
 #!/bin/sh
 
 # env
-source /home/pac/.config/user-dirs.dirs
 export PATH=$HOME/.local/bin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export XCURSOR_THEME=Adwaita
 export XCURSOR_SIZE=16
@@ -11,4 +10,4 @@ export XCURSOR_SIZE=16
 # xrandr --output HDMI-0 --set 'scaling mode' 'Full aspect'
 
 picom -f -b -D 5 --vsync &
-exec startxfce4
+dbus-launch startxfce4
