@@ -19,7 +19,7 @@ st:
 	rm -rf ${HOME}/.git/st
 	git clone --depth=1 https://git.suckless.org/st ${HOME}/.git/st
 	install st.h ${HOME}/.git/st/config.h
-	make -C ${HOME}/.git/st install PREFIX=${PREFIX} CC=cc
+	sudo make -C ${HOME}/.git/st install PREFIX=/usr CC=cc
 
 vim: install pathogen
 	for v in ${VILIST}; do\
