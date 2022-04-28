@@ -51,3 +51,5 @@ PATH=$home/.local/bin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 
 cd
+if(~ `{tty} /dev/tty1)
+    xinit
