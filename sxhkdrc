@@ -1,6 +1,6 @@
 # terminal emulator
 super + shift + Return
-    /home/pac/.local/bin/st
+    st -e tmux attach
 
 # program launcher
 super + p
@@ -14,13 +14,14 @@ super + shift + c
 super + m
 	bspc desktop -l next
 
-
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
-
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
+# resize
+super + alt + {h,j,k,l}
+    bspc window -e {left -10,down +10,up -10,right +10}

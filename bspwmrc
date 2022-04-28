@@ -21,4 +21,4 @@ bspc rule -a Screenkey manage=off
 bspc rule -a xfce4-panel layer=above
 
 feh --bg-scale $HOME/Images/bg.png &
-st &
+st -e tmux attach &
