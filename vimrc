@@ -6,6 +6,8 @@ execute pathogen#infect()
 "colors
 syntax on
 colorscheme default
+hi LineNr    ctermfg=4
+hi Statement ctermfg=7
 
 "disable backup stuff
 set nobackup

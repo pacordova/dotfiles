@@ -7,12 +7,12 @@ unsigned int alpha = 0xdf;
 
 static const char *colorname[] = {
     //normal colors
-    "#0f0f0f", "#ebbcba", "#9ccfd8", "#f6c177",
-    "#31748f", "#eb6f92", "#c4a7e7", "#e0def4",
+    "#0d0d0d", "#de3163", "#aaf0d1", "#e57200",
+    "#232d4b", "#de3163", "#13bfeb", "#f0ffff",
 
     //bright colors
-    "#191724", "#d7827e", "#56949f", "#ea9d34",
-    "#286983", "#b4637a", "#c4a7e7", "#e0def4",
+    "#2d2d2d", "#e12885", "#aaf0d1", "#fff8e7",
+    "#7d9dff", "#d498ff", "#b9d9eb", "#5f5f5f",
 };
 
 //foreground, background, cursor, reverse cursor
