@@ -7,7 +7,7 @@ unsigned int alpha = 0xdf;
 
 static const char *colorname[] = {
     //normal colors
-    "#0d0d0d", "#de3163", "#aaf0d1", "#e57200",
+    "#110f0f", "#de3163", "#aaf0d1", "#e57200",
     "#232d4b", "#de3163", "#13bfeb", "#f0ffff",
 
     //bright colors
