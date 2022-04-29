@@ -1,25 +1,34 @@
 //font
 static char *font = "CodeNewRoman NF:size=12:antialias=true:autohint=false;hintstyle=3;rgba=1";
 
-//terminal colors
+/*
+ * TERMINAL COLORS
+ */
+
 //bg opacity
 unsigned int alpha = 0xdf;
 
+//colors
 static const char *colorname[] = {
-    //normal colors
-    "#0d0d0d", "#ebbcba", "#9ccfd8", "#f6c177",
-    "#31748f", "#eb6f92", "#c4a7e7", "#e0def4",
+    //normal
+    "#0C0D08", "#ea6f91", "#9bced7", "#f1ca93",
+	"#018993", "#c3a5e6", "#eabbb9", "#faebd7",
 
-    //bright colors
-    "#191724", "#d7827e", "#56949f", "#ea9d34",
-    "#286983", "#b4637a", "#c4a7e7", "#e0def4",
+    //bright
+	"#D8D8D8", "#ea6f91", "#9bced7", "#f1ca93",
+	"#018993", "#c3a5e6", "#eabbb9", "#faebd7",
+
+	[255] = 0,
+
+    //extras
+	"#0C0D08", "#D8D8D8", "#D8D8D8",
 };
 
 //foreground, background, cursor, reverse cursor
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-unsigned int defaultcs = 7;
-unsigned int defaultrcs = 15;
+unsigned int defaultbg = 256;
+unsigned int defaultfg = 257;
+unsigned int defaultcs = 258;
+unsigned int defaultrcs = 258;
 
 //input lag in newer st
 static double minlatency = 1;
