@@ -4,7 +4,6 @@ inputcolor='\001\e[0m\002'
 promptcolor='\001\e[1;32m\002'
 
 # misc functions
-fn chroot{firejail '--chroot='$1 '--shell='/bin/sh}
 fn du1 {du -ahxd1}
 fn unique {awk '!($0 in a){a[$0];print $0}'}
 

@@ -1,6 +1,6 @@
 VIMPATH=${HOME}/.config/vim
 STPATH=${HOME}/.git/st
-FLIST=xinitrc tmux.conf rcrc vimrc inputrc\
+FLIST=xinitrc tmux.conf rcrc vimrc inputrc bash_profile bashrc\
 	  config/bspwm/bspwmrc\
 	  config/sxhkd/sxhkdrc
 VILIST=tpope/vim-commentary weakish/rcshell.vim
@@ -31,4 +31,5 @@ uninstall:
 	rm -rf ${VIMPATH} ${STPATH}
 
 install:
+	cp bashrc bash_profile
 	for f in ${FLIST};do install -D `basename $$f` ${HOME}/.$$f;done
