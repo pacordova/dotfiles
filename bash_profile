@@ -1,0 +1,28 @@
+alias du1='du -ahxd1'
+alias unique="awk '!($0 in a){a[$0];print $0}'"
+alias ls='ls --color'
+
+inputcolor='\001\e[0m\002'
+promptcolor='\001\e[1;32m\002'
+gitprompt(){
+    if [[ `git status` =~ *Changes* ]]
+    then
+        echo -ne ${promptcolor}λ${inputcolor}'*';
+    else
+        echo -ne ${promptcolor}λ${inputcolor};
+    fi
+}
+
+export PS1=`gitprompt`' '
+export CFLAGS='-pipe -Os -fstack-protector-strong -fstack-clash-protection '
+export CXXFLAGS=$CFLAGS
+export PREFIX=$HOME/.local
+export VISUAL=vim
+export EDITOR=vim
+export TERM=xterm-256color
+export LESS=eFRX
+
+if [[ '/dev/tty1' = `tty` ]]
+then
+    xinit
+fi
