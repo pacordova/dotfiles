@@ -5,7 +5,7 @@ alias ls='ls --color'
 inputcolor='\001\e[0m\002'
 promptcolor='\001\e[1;32m\002'
 gitprompt(){
-    if [[ `git status` =~ *Changes* ]]
+    if [[ `git status 2>/dev/null | grep Changes` ]]
     then
         echo -ne ${promptcolor}λ${inputcolor}'*';
     else
@@ -13,7 +13,7 @@ gitprompt(){
     fi
 }
 
-export PS1=`gitprompt`' '
+export PS1="\$(gitprompt) "
 export CFLAGS='-pipe -Os -fstack-protector-strong -fstack-clash-protection '
 export CXXFLAGS=$CFLAGS
 export PREFIX=$HOME/.local
