@@ -26,7 +26,7 @@ vim: install pathogen
 		git clone http://github.com/$$v ${VIMPATH}/bundle/`basename $$v`;\
 	done
 
-uninstall:
+clean:
 	for f in ${FLIST}; do rm -f ${HOME}/.$$f; done
 	rm -rf ${VIMPATH} ${STPATH}
 
