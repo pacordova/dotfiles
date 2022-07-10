@@ -10,20 +10,35 @@ unsigned int alpha = 0xdf;
 
 //colors
 static const char *colorname[] = {
-    //normal colors
-    "#111111", "#ebbcba", "#9ccfd8", "#f6c177",
-    "#31748f", "#eb6f92", "#c4a7e7", "#e0def4",
 
-    //bright colors
-    "#191724", "#d7827e", "#56949f", "#ea9d34",
-    "#286983", "#b4637a", "#c4a7e7", "#e0def4",
+  //normal colors
+  "#424242", "#b85c57", "#57864e", "#8f7734",
+  "#2a8dc5", "#8888c7", "#6aa7a8", "#999957",
+
+  //bright colors
+  "#eeeea7", "#f2acaa", "#98ce8f", "#b7b19c",
+  "#a6dcf8", "#d0d1f7", "#b0eced", "#ffffec",
+
+  //background
+  [256] = "#ffffec",
+  //foreground
+  [257] = "#424242",
 };
 
 //foreground, background, cursor, reverse cursor
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-unsigned int defaultcs = 7;
-unsigned int defaultrcs = 15;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+unsigned int defaultcs = 257;
+unsigned int defaultrcs = 256;
+
+/*
+ * Colors used, when the specific fg == defaultfg. So in reverse mode this
+ * will reverse too. Another logic would only make the simple feature too
+ * complex.
+ */
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
+
 
 //input lag in newer st
 static double minlatency = 1;

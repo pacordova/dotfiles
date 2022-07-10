@@ -1,9 +1,9 @@
 alias du1='du -ahxd1'
 alias unique="awk '!($0 in a){a[$0];print $0}'"
-alias ls='ls --color'
+#alias ls='ls --color'
 
 inputcolor='\001\e[0m\002'
-promptcolor='\001\e[1;32m\002'
+promptcolor='\001\e[1;34m\002'
 gitprompt(){
     if [[ `git status 2>/dev/null | grep Changes` ]]
     then

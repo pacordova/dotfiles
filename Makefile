@@ -3,7 +3,7 @@ STPATH=${HOME}/.git/st
 FLIST=xinitrc tmux.conf rcrc vimrc inputrc bash_profile bashrc\
 	  config/bspwm/bspwmrc\
 	  config/sxhkd/sxhkdrc
-VILIST=tpope/vim-commentary weakish/rcshell.vim
+VILIST=tpope/vim-commentary weakish/rcshell.vim olivertaylor/vacme
 
 .PHONY: pathogen
 

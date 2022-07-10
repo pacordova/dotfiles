@@ -5,7 +5,7 @@ execute pathogen#infect()
 
 "colors
 syntax on
-colorscheme default
+colorscheme vacme
 hi LineNr    ctermfg=4
 hi Statement ctermfg=7
 
