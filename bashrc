@@ -3,7 +3,7 @@ alias unique="awk '!($0 in a){a[$0];print $0}'"
 alias ls='ls'
 
 inputcolor='\001\e[0m\002'
-promptcolor='\001\e[1;34m\002'
+promptcolor='\001\e[1;38m\002'
 gitprompt(){
     if [[ `git status 2>/dev/null | grep Changes` ]]
     then
