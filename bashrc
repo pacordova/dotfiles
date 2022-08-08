@@ -1,6 +1,6 @@
-alias du1='du -ahxd1'
+alias @ip='dig whoami.cloudflare ch txt @1.1.1.1 +short'
 alias unique="awk '!($0 in a){a[$0];print $0}'"
-alias ls='ls'
+alias du1='du -ahxd1'
 
 inputcolor='\001\e[0m\002'
 promptcolor='\001\e[1;38m\002'
@@ -25,5 +25,5 @@ export LESS=eFRX
 
 if [[ '/dev/tty1' = `tty` ]]
 then
-    xinit
+    xinit && logout
 fi
