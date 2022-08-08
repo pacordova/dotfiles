@@ -1,29 +1,24 @@
 "init
-set runtimepath=$HOME/.config/vim,/usr/share/vim/*
+set runtimepath=$HOME/.config/vim,/usr/share/vim/90
 set packpath=$HOME/.config/vim
 execute pathogen#infect()
 
 "colors
-syntax on
-colorscheme vacme
+syntax off
 hi LineNr    ctermfg=4
-hi Statement ctermfg=7
 
-"disable backup stuff
+"disable backups
 set nobackup
 set noswapfile
 set nowritebackup
 set noundofile
 
-"misc qol
+"misc
 autocmd BufWritePre * %s/\s\+$//e
 let r_indent_align_args = 0
-set autoindent
-set cindent
-set cinoptions=t0
 set clipboard=unnamedplus
-set mouse=a
-set nu
 set expandtab
 set shiftwidth=4
 set tabstop=4
+set mouse=a
+set nu
