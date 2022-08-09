@@ -1,5 +1,5 @@
 "init
-set runtimepath=$HOME/.config/vim,/usr/share/vim/90
+set runtimepath=$HOME/.config/vim,/usr/share/vim/vim90
 set packpath=$HOME/.config/vim
 execute pathogen#infect()
 
