@@ -16,6 +16,7 @@ set noundofile
 "misc
 autocmd BufWritePre * %s/\s\+$//e
 let r_indent_align_args = 0
+vnoremap <leader>p "_dP
 set clipboard=unnamedplus
 set expandtab
 set shiftwidth=4
