@@ -23,3 +23,9 @@ set shiftwidth=4
 set tabstop=4
 set mouse=a
 set nu
+
+"word wrap
+set showbreak=\ \ \ \ |
+set linebreak
+set breakat=\ ^I!@*+;:,/?
+set columns=80
