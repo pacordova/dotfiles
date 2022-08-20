@@ -27,5 +27,5 @@ set nu
 "word wrap
 set showbreak=\ \ \ \ |
 set linebreak
-set breakat=\ ^I!@*+;:,/?
+set breakat=\ !@*+;:,/?
 set columns=80
