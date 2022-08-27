@@ -13,7 +13,7 @@ gitprompt(){
     fi
 }
 
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PS1="\$(gitprompt) "
 export CFLAGS='-pipe -Os -fstack-protector-strong -fstack-clash-protection '
 export CXXFLAGS=$CFLAGS
