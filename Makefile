@@ -19,3 +19,4 @@ clean:
 install:
 	for f in ${FLIST};do install -D `basename $$f` ${HOME}/.$$f;done
 	ln -sf ${HOME}/.bashrc ${HOME}/.bash_profile
+	pkill sxhkd && sxhkd &
