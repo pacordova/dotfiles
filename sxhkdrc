@@ -4,7 +4,7 @@ super + shift + Return
 
 # program launcher
 super + p
-    dmenu_run -fn 'CodeNewRoman NF-12' -l 10
+    dmenu_run -fn 'Code New Roman-12' -l 10
 
 # close and kill
 super + shift + c

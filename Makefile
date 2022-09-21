@@ -4,7 +4,7 @@ FLIST=xinitrc tmux.conf rcrc vimrc inputrc bashrc\
 	  config/bspwm/bspwmrc\
 	  config/sxhkd/sxhkdrc
 
-all: install st
+all: install 
 
 st:
 	rm -rf ${HOME}/.git/st
