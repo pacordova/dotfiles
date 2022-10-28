@@ -7,6 +7,7 @@ syntax off
 hi LineNr    ctermfg=4
 
 "misc
+set nobackup nowritebackup
 set expandtab
 set shiftwidth=4
 set tabstop=4
