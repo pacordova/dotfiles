@@ -10,26 +10,28 @@ unsigned int alpha = 0xdf;
 
 //colors
 static const char *colorname[] = {
-
-  //normal colors
-  "#424242", "#b85c57", "#57864e", "#8f7734",
-  "#2a8dc5", "#8888c7", "#6aa7a8", "#999957",
-
-  //bright colors
-  "#eeeea7", "#f2acaa", "#98ce8f", "#b7b19c",
-  "#a6dcf8", "#d0d1f7", "#b0eced", "#ffffec",
-
-  //background
-  [256] = "#ffffec",
-  //foreground
-  [257] = "#424242",
+  "#1f2022", /* base00 */
+  "#f2241f", /* base08 */
+  "#67b11d", /* base0B */
+  "#b1951d", /* base0A */
+  "#4f97d7", /* base0D */
+  "#a31db1", /* base0E */
+  "#2d9574", /* base0C */
+  "#a3a3a3", /* base05 */
+  "#585858", /* base03 */
+  "#ffa500", /* base09 */
+  "#b9d9eb", /* base01 */
+  "#444155", /* base02 */
+  "#b8b8b8", /* base04 */
+  "#e8e8e8", /* base06 */
+  "#b03060", /* base0F */
+  "#f8f8f8", /* base07 */
 };
 
-//foreground, background, cursor, reverse cursor
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-unsigned int defaultcs = 257;
-unsigned int defaultrcs = 256;
+unsigned int defaultfg = 13;
+unsigned int defaultbg = 0;
+unsigned int defaultcs = 13;
+unsigned int defaultrcs = 7;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
