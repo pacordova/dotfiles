@@ -1,7 +1,5 @@
-" Name: No Frils Dark Colorscheme
-" Author: robertmeta (on Github)
-" URL: https://github.com/robertmeta/nofrils
-" (see this url for latest release & screenshots)
+" modified nofrills theme
+" https://github.com/robertmeta/nofrils
 " License: OSI approved MIT license
 
 hi clear
