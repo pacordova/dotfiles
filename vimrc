@@ -3,7 +3,8 @@ set runtimepath=$HOME/.config/vim,/usr/share/vim/vim90
 set packpath=$HOME/.config/vim
 
 "colors
-syntax off
+syntax on
+colorscheme spac
 hi LineNr    ctermfg=4
 
 "misc

@@ -2,7 +2,8 @@ VIMPATH=${HOME}/.config/vim
 STPATH=${HOME}/Downloads/st
 FLIST=xinitrc tmux.conf rcrc vimrc inputrc bashrc\
 	  config/bspwm/bspwmrc\
-	  config/sxhkd/sxhkdrc
+	  config/sxhkd/sxhkdrc\
+	  config/vim/colors/spac.vim
 
 all: install 
 
