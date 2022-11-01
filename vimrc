@@ -11,6 +11,7 @@ colorscheme spac
 hi LineNr    ctermfg=4
 
 "misc
+set nu
 set nobackup nowritebackup
 set expandtab
 set shiftwidth=4
