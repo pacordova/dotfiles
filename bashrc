@@ -2,8 +2,8 @@ alias @ip='dig whoami.cloudflare ch txt @1.1.1.1 +short'
 alias unique="awk '!($0 in a){a[$0];print $0}'"
 alias du1='du -ahxd1'
 
-inputcolor='\001\e[0m\002'
-promptcolor='\001\e[1;38m\002'
+inputcolor='\001\e[35m\002'
+promptcolor='\001\e[1;31m\002'
 gitprompt(){
     if [[ `git status 2>/dev/null | grep Changes` ]]
     then

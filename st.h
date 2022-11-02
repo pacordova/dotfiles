@@ -10,28 +10,29 @@ unsigned int alpha = 0xdf;
 
 //colors
 static const char *colorname[] = {
-  "#1f2022", /* base00 */
-  "#f2241f", /* base08 */
-  "#67b11d", /* base0B */
-  "#b1951d", /* base0A */
-  "#4f97d7", /* base0D */
-  "#8a2be2", /* base0E */
-  "#2d9574", /* base0C */
-  "#a3a3a3", /* base05 */
-  "#585858", /* base03 */
-  "#ffa500", /* base09 */
-  "#b9d9eb", /* base01 */
-  "#444155", /* base02 */
-  "#b8b8b8", /* base04 */
-  "#e8e8e8", /* base06 */
-  "#b03060", /* base0F */
-  "#f8f8f8", /* base07 */
+  "#1f2022", // black
+  "#fe6776", // red
+  "#a13cfe", // "green" 
+  "#fefe55", // yellow
+  "#2048ef", // blue
+  "#fe55fe", // magenta 
+  "#66cafe", // cyan
+  "#f5f5f5", // white
+  "#5f5f5f", // bright black
+  "#fe99af", // bright red
+  "#89fe99", // bright green
+  "#fefe77", // bright yellow
+  "#55cafe", // bright blue
+  "#fefefe", // fg
+  "#fe55fe", // bright magenta
+  "#1fcafe", // bright cyan
+  "#fefefe", // bright white
 };
 
-unsigned int defaultfg = 13;
+unsigned int defaultfg = 7;
 unsigned int defaultbg = 0;
 unsigned int defaultcs = 13;
-unsigned int defaultrcs = 7;
+unsigned int defaultrcs = 0;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
