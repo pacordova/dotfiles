@@ -7,9 +7,9 @@ promptcolor='\001\e[1;31m\002'
 gitprompt(){
     if [[ `git status 2>/dev/null | grep Changes` ]]
     then
-        echo -ne λ'*';
+        echo -ne ${promptcolor}λ${inputcolor}'*';
     else
-        echo -ne λ;
+        echo -ne ${promptcolor}λ${inputcolor};
     fi
 }
 
