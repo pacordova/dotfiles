@@ -10,37 +10,37 @@ unsigned int alpha = 0xdf;
 
 //colors
 static const char *colorname[] = {
-  "#1f2022", // black
-  "#fe6776", // red
-  "#a13cfe", // "green" 
-  "#fefe55", // yellow
-  "#2048ef", // blue
-  "#fe55fe", // magenta 
-  "#66cafe", // cyan
-  "#f5f5f5", // white
-  "#5f5f5f", // bright black
-  "#fe99af", // bright red
-  "#89fe99", // bright green
-  "#fefe77", // bright yellow
-  "#55cafe", // bright blue
-  "#fefefe", // fg
-  "#fe55fe", // bright magenta
-  "#1fcafe", // bright cyan
-  "#fefefe", // bright white
+  "#000000", // Black
+  "#f00000", // Red
+  "#aaffaa", // Palegreen
+  "#ffffea", // Paleyellow
+  "#000080", // Navyblue
+  "#ff0090", // Magenta
+  "#aaffff", // Palebluegreen
+  "#ffffff", // White
+  "#000000", // Boldblack
+  "#5f5f5f", // Grey
+  "#aa0000", // Darkred
+  "#448844", // Darkgreen
+  "#eeee9e", // Darkyellow
+  "#000055", // Darkblue
+  "#8a2be2", // Blueviolet
+  "#008080", // Teal
+  "#5f5f5f", // Grey
 };
 
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-unsigned int defaultcs = 13;
-unsigned int defaultrcs = 0;
+unsigned int defaultfg = 0;
+unsigned int defaultbg = 3;
+unsigned int defaultcs = 0;
+unsigned int defaultrcs = 10;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
  * will reverse too. Another logic would only make the simple feature too
  * complex.
  */
-static unsigned int defaultitalic = 7;
-static unsigned int defaultunderline = 7;
+static unsigned int defaultitalic = 0;
+static unsigned int defaultunderline = 0;
 
 
 //input lag in newer st
