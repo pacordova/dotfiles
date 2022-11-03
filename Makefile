@@ -2,6 +2,18 @@ XDG_DOWNLOAD_DIR=${HOME}/Downloads
 XDG_CONFIG_HOME=${HOME}/.config
 VIMPATH=${HOME}/.config/vim
 
+DOTFILES=\
+	${HOME}/.bash_profile\
+	${HOME}/.bashrc\
+   	${HOME}/.inputrc\
+	${HOME}/.rcrc\
+	${HOME}/.tmux.conf\
+   	${HOME}/.vimrc\
+   	${HOME}/.xinitrc\
+   	${VIMPATH}/colors/acme.vim\
+	${XDG_CONFIG_HOME}/bspwm/bspwmrc\
+	${XDG_CONFIG_HOME}/sxhkd/sxhkdrc\
+
 all: install 
 
 ${HOME}/.bash_profile: bashrc
@@ -36,26 +48,24 @@ ${XDG_CONFIG_HOME}/sxhkd/sxhkdrc: sxhkdrc
 	cp sxhkdrc $@
 
 ${XDG_DOWNLOAD_DIR}/st:
+	rm -fr ${XDG_DOWNLOAD_DIR}/st
 	git clone --depth=1 https://git.suckless.org/st ${XDG_DOWNLOAD_DIR}/st
 
 st: ${XDG_DOWNLOAD_DIR}/st
 	make -C ${XDG_DOWNLOAD_DIR}/st clean
-	install st.h ${HOME}/.git/st/config.h
+	cp st.h ${XDG_DOWNLOAD_DIR}/st/config.h
 	sudo make -C ${XDG_DOWNLOAD_DIR}/st install PREFIX=/usr CC=cc CFLAGS="$(CFLAGS)"
 
 pathogen:
-	rm -fr ${VIMPATH} ${XDG_DOWNLOAD_DIR}/st
+	rm -fr ${VIMPATH} 
 	mkdir -p ${VIMPATH}/autoload ${VIMPATH}/bundle
 	curl -LSso ${VIMPATH}/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	git clone https://github.com/weakish/rcshell.vim ${VIMPATH}/bundle/rcshell.vim
 	git clone https://github.com/tpope/vim-commentary ${VIMPATH}/bundle/commentary.vim
 
 clean:
-	for f in ${DOTFILES}; do rm -fr ${HOME}/.$$f; done
-	rm -fr ${VIMPATH} ${HOME}/Downloads
-	rm -fr ${HOME}/Downloads/st
+	for f in ${DOTFILES}; do rm $$f; done
+	rm -fr ${VIMPATH} ${XDG_DOWNLOAD_DIR}/st
 
-install: ${HOME}/.bash_profile ${HOME}/.bashrc ${HOME}/.inputrc ${HOME}/.rcrc \
-	${HOME}/.tmux.conf ${HOME}/.vimrc ${HOME}/.xinitrc ${VIMPATH}/colors/acme.vim \
-	${XDG_CONFIG_HOME}/bspwm/bspwmrc ${XDG_CONFIG_HOME}/sxhkd/sxhkdrc 
+install: ${DOTFILES}
 	pkill sxhkd && sxhkd &

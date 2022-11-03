@@ -12,7 +12,7 @@ unsigned int alpha = 0xdf;
 static const char *colorname[] = {
   "#000000", // Black
   "#f00000", // Red
-  "#aaffaa", // Palegreen
+  "#448844", // Darkgreen
   "#ffffea", // Paleyellow
   "#000080", // Navyblue
   "#ff0090", // Magenta
