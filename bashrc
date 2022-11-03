@@ -13,6 +13,7 @@ gitprompt(){
     fi
 }
 
+export LS_COLORS='ex=1;32:di=1;35'
 export PATH=$HOME/.local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PS1="\$(gitprompt) "
 export CFLAGS='-pipe -Os -fstack-protector-strong -fstack-clash-protection '

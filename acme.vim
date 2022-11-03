@@ -38,8 +38,8 @@ hi WildMenu   term=NONE cterm=NONE ctermfg=16   ctermbg=12
 
 
 " misc
-hi Visual term=NONE cterm=NONE ctermfg=3 ctermbg=16 
-
+hi Visual     term=NONE cterm=NONE ctermfg=3 ctermbg=16 
+hi MatchParen term=NONE cterm=NONE ctermfg=3 ctermbg=16
 
 " Faded
 hi ColorColumn term=NONE cterm=NONE ctermfg=NONE ctermbg=253 gui=NONE guifg=NONE guibg=#dadada
@@ -56,7 +56,6 @@ hi CursorIM term=NONE cterm=NONE ctermfg=16 ctermbg=4 gui=NONE guifg=black guibg
 hi CursorLine term=NONE cterm=NONE ctermfg=NONE ctermbg=228 gui=NONE guifg=NONE guibg=#ffff87
 hi Cursor term=NONE cterm=NONE ctermfg=16 ctermbg=4 gui=NONE guifg=black guibg=#00ffff
 hi Directory term=NONE cterm=NONE ctermfg=53 ctermbg=NONE gui=NONE guifg=#5f005f guibg=NONE
-hi MatchParen term=NONE cterm=NONE ctermfg=15 ctermbg=4 gui=NONE guifg=#ffffff guibg=#000080
 hi ModeMsg term=NONE cterm=NONE ctermfg=53 ctermbg=NONE gui=NONE guifg=#5f005f guibg=NONE
 hi MoreMsg term=NONE cterm=NONE ctermfg=53 ctermbg=NONE gui=NONE guifg=#5f005f guibg=NONE
 hi PmenuSel term=NONE cterm=NONE ctermfg=16 ctermbg=13 gui=NONE guifg=black guibg=#ff00ff

@@ -1,39 +1,61 @@
+XDG_DOWNLOAD_DIR=${HOME}/Downloads
+XDG_CONFIG_HOME=${HOME}/.config
 VIMPATH=${HOME}/.config/vim
-STPATH=${HOME}/Downloads/st
-FLIST=xinitrc tmux.conf rcrc inputrc bashrc\
-	  config/bspwm/bspwmrc\
-	  config/sxhkd/sxhkdrc\
 
 all: install 
 
-st:
-	rm -fr ${HOME}/.git/st
-	git clone --depth=1 https://git.suckless.org/st ${HOME}/.git/st
-	install st.h ${HOME}/.git/st/config.h
-	sudo make -C ${HOME}/.git/st install PREFIX=/usr CC=cc CFLAGS="$(CFLAGS)"
+${HOME}/.bash_profile: bashrc
+	cp bashrc $@
 
-vim:
-	rm -fr ${VIMPATH}
-	mkdir -p ${VIMPATH}/autoload ${VIMPATH}/bundle ${VIMPATH}/colors
+${HOME}/.bashrc: bashrc
+	cp bashrc $@
+
+${HOME}/.inputrc: inputrc
+	cp inputrc $@
+
+${HOME}/.rcrc: rcrc
+	cp tmux.conf $@
+
+${HOME}/.tmux.conf: tmux.conf
+	cp tmux.conf $@
+
+${HOME}/.vimrc: vimrc
+	cp vimrc $@
+
+${HOME}/.xinitrc: xinitrc
+	cp xinitrc $@
+
+${VIMPATH}/colors/acme.vim: acme.vim
+	mkdir -p ${VIMPATH}/colors
+	cp acme.vim $@
+
+${XDG_CONFIG_HOME}/bspwm/bspwmrc: bspwmrc
+	cp bspwmrc $@
+
+${XDG_CONFIG_HOME}/sxhkd/sxhkdrc: sxhkdrc
+	cp sxhkdrc $@
+
+${XDG_DOWNLOAD_DIR}/st:
+	git clone --depth=1 https://git.suckless.org/st ${XDG_DOWNLOAD_DIR}/st
+
+st: ${XDG_DOWNLOAD_DIR}/st
+	make -C ${XDG_DOWNLOAD_DIR}/st clean
+	install st.h ${HOME}/.git/st/config.h
+	sudo make -C ${XDG_DOWNLOAD_DIR}/st install PREFIX=/usr CC=cc CFLAGS="$(CFLAGS)"
+
+pathogen:
+	rm -fr ${VIMPATH} ${XDG_DOWNLOAD_DIR}/st
+	mkdir -p ${VIMPATH}/autoload ${VIMPATH}/bundle
 	curl -LSso ${VIMPATH}/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	git clone https://github.com/weakish/rcshell.vim ${VIMPATH}/bundle/rcshell.vim
 	git clone https://github.com/tpope/vim-commentary ${VIMPATH}/bundle/commentary.vim
-	cp acme.vim ${VIMPATH}/colors
-	cp vimrc ${HOME}/.vimrc
 
 clean:
-	for f in ${FLIST}; do rm -fr ${HOME}/.$$f; done
-	rm -fr ${VIMPATH} ${STPATH}
+	for f in ${DOTFILES}; do rm -fr ${HOME}/.$$f; done
+	rm -fr ${VIMPATH} ${HOME}/Downloads
+	rm -fr ${HOME}/Downloads/st
 
-install:
-	mkdir -p ${HOME}/.config/bspwm 
-	mkdir -p ${HOME}/.config/sxhkd
-	cp xinitrc   ${HOME}/.xinitrc
-	cp tmux.conf ${HOME}/.tmux.conf
-	cp rcrc      ${HOME}/.rcrc
-	cp inputrc   ${HOME}/.inputrc
-	cp bashrc    ${HOME}/.bashrc
-	cp bashrc    ${HOME}/.bash_profile
-	cp bspwmrc   ${HOME}/.config/bspwm
-	cp sxhkdrc   ${HOME}/.config/sxhkdrc
+install: ${HOME}/.bash_profile ${HOME}/.bashrc ${HOME}/.inputrc ${HOME}/.rcrc \
+	${HOME}/.tmux.conf ${HOME}/.vimrc ${HOME}/.xinitrc ${VIMPATH}/colors/acme.vim \
+	${XDG_CONFIG_HOME}/bspwm/bspwmrc ${XDG_CONFIG_HOME}/sxhkd/sxhkdrc 
 	pkill sxhkd && sxhkd &
