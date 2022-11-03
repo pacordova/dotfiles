@@ -18,7 +18,7 @@ vim:
 	curl -LSso ${VIMPATH}/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	git clone https://github.com/weakish/rcshell.vim ${VIMPATH}/bundle/rcshell.vim
 	git clone https://github.com/tpope/vim-commentary ${VIMPATH}/bundle/commentary.vim
-	cp spac.vim ${VIMPATH}/colors
+	cp acme.vim ${VIMPATH}/colors
 	cp vimrc ${HOME}/.vimrc
 
 clean:
