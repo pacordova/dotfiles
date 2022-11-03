@@ -1,6 +1,6 @@
 XDG_DOWNLOAD_DIR=${HOME}/Downloads
 XDG_CONFIG_HOME=${HOME}/.config
-VIMPATH=${HOME}/.config/vim
+VIMPATH=${XDG_CONFIG_HOME}/vim
 
 DOTFILES=\
 	${HOME}/.bash_profile\
@@ -57,7 +57,6 @@ st: ${XDG_DOWNLOAD_DIR}/st
 	sudo make -C ${XDG_DOWNLOAD_DIR}/st install PREFIX=/usr CC=cc CFLAGS="$(CFLAGS)"
 
 pathogen:
-	rm -fr ${VIMPATH} 
 	mkdir -p ${VIMPATH}/autoload ${VIMPATH}/bundle
 	curl -LSso ${VIMPATH}/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	git clone https://github.com/weakish/rcshell.vim ${VIMPATH}/bundle/rcshell.vim
