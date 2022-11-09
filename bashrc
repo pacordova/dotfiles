@@ -7,15 +7,15 @@ promptcolor='\001\e[1;30m\002'
 gitprompt(){
     if [[ `git status 2>/dev/null | grep Changes` ]]
     then
-        echo -ne ${promptcolor}λ${inputcolor}'*';
+        echo -ne λ*;
     else
-        echo -ne ${promptcolor}λ${inputcolor};
+        echo -ne λ;
     fi
 }
 
-#export LS_COLORS='ex=1;32:di=1;35'
+export LS_COLORS='ex=1;32:di=1;35'
 export PATH=$HOME/.local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-#export PS1="\$(gitprompt) "
+export PS1="\$(gitprompt) "
 export CFLAGS='-pipe -Os -fstack-protector-strong -fstack-clash-protection '
 export CXXFLAGS=$CFLAGS
 export PREFIX=$HOME/.local
