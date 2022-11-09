@@ -10,10 +10,10 @@ if exists("syntax_on")
 endif
 
 let g:colors_name = "acme"
-set background=light
 
 " Baseline
-hi Normal term=NONE cterm=NONE ctermfg=16 ctermbg=NONE 
+hi! link Terminal Normal
+
 
 " Comment
 hi Comment          term=NONE cterm=NONE ctermfg=11 ctermbg=NONE 

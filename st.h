@@ -1,5 +1,5 @@
 //font
-static char *font = "Code New Roman:size=15:antialias=true:autohint=false;hintstyle=3;rgba=1";
+static char *font = "CodeNewRoman Nerd Font Mono:size=15:antialias=true:autohint=false;hintstyle=3;rgba=1";
 
 /*
  * TERMINAL COLORS

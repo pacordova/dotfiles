@@ -5,4 +5,5 @@ export XCURSOR_THEME=Adwaita
 export XCURSOR_SIZE=16
 
 picom -f -b -D 5 --vsync &
-dbus-launch startxfce4
+bspwmbar &
+exec bspwm
