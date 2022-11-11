@@ -12,10 +12,6 @@ endif
 
 let g:colors_name = "acme"
 
-" Baseline
-hi! link Terminal Normal
-
-
 " Comment
 hi Comment          term=NONE cterm=NONE ctermfg=10 ctermbg=NONE 
 hi SpecialComment   term=NONE cterm=NONE ctermfg=10 ctermbg=NONE
@@ -23,20 +19,20 @@ hi VimCommentTitle  term=NONE cterm=NONE ctermfg=10 ctermbg=NONE
 
 " Status
 hi StatusLine   term=NONE cterm=NONE ctermfg=16 ctermbg=6
-hi StatusLineNC term=NONE cterm=NONE ctermfg=16 ctermbg=195
+hi StatusLineNC term=NONE cterm=NONE ctermfg=16 ctermbg=6
 
 " search
-hi IncSearch  term=NONE cterm=NONE ctermfg=NONE ctermbg=12 
-hi Search     term=NONE cterm=NONE ctermfg=NONE ctermbg=12 
-hi ErrorMsg   term=NONE cterm=NONE ctermfg=16   ctermbg=12
-hi Error      term=NONE cterm=NONE ctermfg=16   ctermbg=12 
-hi WarningMsg term=NONE cterm=NONE ctermfg=16   ctermbg=12 
-hi WildMenu   term=NONE cterm=NONE ctermfg=16   ctermbg=12 
+hi IncSearch  term=NONE cterm=NONE ctermfg=16 ctermbg=3 
+hi Search     term=NONE cterm=NONE ctermfg=16 ctermbg=3
+hi ErrorMsg   term=NONE cterm=NONE ctermfg=16 ctermbg=3
+hi Error      term=NONE cterm=NONE ctermfg=16 ctermbg=3 
+hi WarningMsg term=NONE cterm=NONE ctermfg=16 ctermbg=3 
+hi WildMenu   term=NONE cterm=NONE ctermfg=16 ctermbg=3 
 
 
 " misc
-hi Visual     term=NONE cterm=NONE ctermfg=3 ctermbg=16 
-hi MatchParen term=NONE cterm=NONE ctermfg=3 ctermbg=16
+hi Visual     term=NONE cterm=NONE ctermfg=8 ctermbg=3
+hi MatchParen term=NONE cterm=NONE ctermfg=8 ctermbg=3
 
 " Faded
 hi ColorColumn term=NONE cterm=NONE ctermfg=NONE ctermbg=253 gui=NONE guifg=NONE guibg=#dadada
