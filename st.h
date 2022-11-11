@@ -19,7 +19,6 @@ static const char *colorname[] = {
   "#aaffff", // Palebluegreen
   "#ffffff", // White
   "#000000", // Boldblack
-  "#5f5f5f", // Grey
   "#aa0000", // Darkred
   "#448844", // Darkgreen
   "#eeee9e", // Darkyellow

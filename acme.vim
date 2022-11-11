@@ -3,6 +3,7 @@
 " URL: https://github.com/robertmeta/nofrils
 " (see this url for latest release & screenshots)
 " License: OSI approved MIT license
+" Modified by Paul A. Cordova
 
 hi clear
 if exists("syntax_on")
@@ -16,9 +17,9 @@ hi! link Terminal Normal
 
 
 " Comment
-hi Comment          term=NONE cterm=NONE ctermfg=11 ctermbg=NONE 
-hi SpecialComment   term=NONE cterm=NONE ctermfg=11 ctermbg=NONE
-hi VimCommentTitle  term=NONE cterm=NONE ctermfg=11 ctermbg=NONE
+hi Comment          term=NONE cterm=NONE ctermfg=10 ctermbg=NONE 
+hi SpecialComment   term=NONE cterm=NONE ctermfg=10 ctermbg=NONE
+hi VimCommentTitle  term=NONE cterm=NONE ctermfg=10 ctermbg=NONE
 
 " Status
 hi StatusLine   term=NONE cterm=NONE ctermfg=16 ctermbg=6
