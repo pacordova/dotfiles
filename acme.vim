@@ -24,10 +24,6 @@ hi VimCommentTitle  term=NONE cterm=NONE ctermfg=11 ctermbg=NONE
 hi StatusLine   term=NONE cterm=NONE ctermfg=16 ctermbg=6
 hi StatusLineNC term=NONE cterm=NONE ctermfg=16 ctermbg=195
 
-" Line Numbers
-hi LineNr       term=NONE cterm=NONE ctermfg=16 ctermbg=12
-hi CursorLineNr term=NONE cterm=NONE ctermfg=3 ctermbg=59
-
 " search
 hi IncSearch  term=NONE cterm=NONE ctermfg=NONE ctermbg=12 
 hi Search     term=NONE cterm=NONE ctermfg=NONE ctermbg=12 
