@@ -1,4 +1,4 @@
-alias @ip='dig whoami.cloudflare ch txt @1.1.1.1 +short'
+alias ip1='dig whoami.cloudflare ch txt @1.1.1.1 +short'
 alias unique="awk '!($0 in a){a[$0];print $0}'"
 alias du1='du -ahxd1'
 
@@ -13,7 +13,7 @@ gitprompt(){
     fi
 }
 
-export LS_COLORS='ex=1;32:di=1;35'
+export LS_COLORS='ex=1;30:di=1;33'
 export PATH=$HOME/.local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PS1="\$(gitprompt) "
 export CFLAGS='-pipe -Os -fstack-protector-strong -fstack-clash-protection '

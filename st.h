@@ -13,23 +13,23 @@ static const char *colorname[] = {
   "#000000", // Black
   "#f00000", // Red
   "#448844", // Darkgreen
-  "#ffffea", // Paleyellow
-  "#000080", // Navyblue
+  "#8b6508", // Darkgoldenrod4
+  "#000080", // Blue
   "#ff0090", // Magenta
   "#aaffff", // Palebluegreen
   "#ffffff", // White
   "#000000", // Boldblack
   "#aa0000", // Darkred
   "#448844", // Darkgreen
-  "#eeee9e", // Darkyellow
-  "#000055", // Darkblue
-  "#8a2be2", // Blueviolet
-  "#008080", // Teal
-  "#5f5f5f", // Grey
+  "#8b6508", // Darkyellow
+  "#000080", // Bright blue
+  "#ff0090", // Magenta
+  "#55aaaa", // Bright cyan
+  "#ffffea", // Paleyellow
 };
 
 unsigned int defaultfg = 0;
-unsigned int defaultbg = 3;
+unsigned int defaultbg = 15;
 unsigned int defaultcs = 0;
 unsigned int defaultrcs = 10;
 
