@@ -33,48 +33,6 @@ hi WildMenu   term=NONE cterm=NONE ctermfg=16 ctermbg=3
 hi Visual     term=NONE cterm=NONE ctermfg=15 ctermbg=16
 hi MatchParen term=NONE cterm=NONE ctermfg=15 ctermbg=16
 
-" Faded
-"hi ColorColumn term=NONE cterm=NONE ctermfg=NONE ctermbg=253 gui=NONE guifg=NONE guibg=#dadada
-"hi FoldColumn term=NONE cterm=NONE ctermfg=136 ctermbg=NONE gui=NONE guifg=#af8700 guibg=NONE
-"hi Folded term=NONE cterm=NONE ctermfg=240 ctermbg=NONE gui=NONE guifg=#585858 guibg=NONE
-"hi NonText term=NONE cterm=NONE ctermfg=136 ctermbg=NONE gui=NONE guifg=#af8700 guibg=NONE
-"hi SignColumn term=NONE cterm=NONE ctermfg=240 ctermbg=NONE gui=NONE guifg=#585858 guibg=NONE
-"hi SpecialKey term=NONE cterm=NONE ctermfg=240 ctermbg=NONE gui=NONE guifg=#585858 guibg=NONE
-"hi VertSplit term=NONE cterm=NONE ctermfg=16 ctermbg=195 gui=NONE guifg=black guibg=#d7ffff
-
-" Highlight
-"hi CursorColumn term=NONE cterm=NONE ctermfg=NONE ctermbg=228 gui=NONE guifg=NONE guibg=#ffff87
-"hi CursorIM term=NONE cterm=NONE ctermfg=16 ctermbg=4 gui=NONE guifg=black guibg=#00ffff
-"hi CursorLine term=NONE cterm=NONE ctermfg=NONE ctermbg=228 gui=NONE guifg=NONE guibg=#ffff87
-"hi Cursor term=NONE cterm=NONE ctermfg=16 ctermbg=4 gui=NONE guifg=black guibg=#00ffff
-"hi Directory term=NONE cterm=NONE ctermfg=53 ctermbg=NONE gui=NONE guifg=#5f005f guibg=NONE
-"hi ModeMsg term=NONE cterm=NONE ctermfg=53 ctermbg=NONE gui=NONE guifg=#5f005f guibg=NONE
-"hi MoreMsg term=NONE cterm=NONE ctermfg=53 ctermbg=NONE gui=NONE guifg=#5f005f guibg=NONE
-"hi PmenuSel term=NONE cterm=NONE ctermfg=16 ctermbg=13 gui=NONE guifg=black guibg=#ff00ff
-"hi Question term=NONE cterm=NONE ctermfg=53 ctermbg=NONE gui=NONE guifg=#5f005f guibg=NONE
-"hi Todo term=NONE cterm=NONE ctermfg=2 ctermbg=NONE gui=NONE guifg=#008000 guibg=NONE
-"hi VisualNOS term=underline cterm=underline ctermfg=16 ctermbg=222 gui=underline guifg=NONE guibg=#ffd787
-
-" Reversed
-"hi PmenuSbar term=reverse cterm=reverse ctermfg=NONE ctermbg=NONE gui=reverse guifg=NONE guibg=NONE
-"hi Pmenu term=reverse cterm=reverse ctermfg=NONE ctermbg=NONE gui=reverse guifg=NONE guibg=NONE
-"hi PmenuThumb term=reverse cterm=reverse ctermfg=NONE ctermbg=NONE gui=reverse guifg=NONE guibg=NONE
-"hi TabLineSel term=reverse cterm=reverse ctermfg=NONE ctermbg=NONE gui=reverse guifg=NONE guibg=NONE
-
-
-" Spell
-"hi SpellBad term=underline cterm=underline ctermfg=5 ctermbg=NONE gui=underline guifg=#cd00cd guibg=NONE
-"hi SpellCap term=underline cterm=underline ctermfg=5 ctermbg=NONE gui=underline guifg=#cd00cd guibg=NONE
-"hi SpellLocal term=underline cterm=underline ctermfg=5 ctermbg=NONE gui=underline guifg=#cd00cd guibg=NONE
-"hi SpellRare term=underline cterm=underline ctermfg=5 ctermbg=NONE gui=underline guifg=#cd00cd guibg=NONE
-
-" Vim Features
-"hi Menu term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
-"hi Scrollbar term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
-"hi TabLineFill term=NONE cterm=NONE ctermfg=16 ctermbg=136 gui=NONE guifg=black guibg=#af8700
-"hi TabLine term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
-"hi Tooltip term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
-
 " Syntax Highsepiaing (or lack there of)
 hi Boolean term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
 hi Character term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
@@ -111,9 +69,3 @@ hi Title term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guib
 hi Typedef term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
 hi Type term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
 hi Underlined term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
-
-" Sneak
-hi SneakLabelMask term=NONE cterm=NONE ctermfg=16 ctermbg=195 gui=NONE guifg=black guibg=#d7ffff
-hi SneakTarget term=NONE cterm=NONE ctermfg=16 ctermbg=195 gui=NONE guifg=black guibg=#d7ffff
-hi SneakLabelTarget term=NONE cterm=NONE ctermfg=16 ctermbg=183 gui=NONE guifg=black guibg=#d7afff
-hi SneakScope term=NONE cterm=NONE ctermfg=16 ctermbg=183 gui=NONE guifg=black guibg=#d7afff

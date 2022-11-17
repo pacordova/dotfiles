@@ -7,6 +7,7 @@ execute pathogen#infect()
 
 "colors
 syntax off
+colorscheme acme
 
 "misc
 set nu
