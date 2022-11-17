@@ -6,8 +6,7 @@ set packpath=$HOME/.config/vim
 execute pathogen#infect()
 
 "colors
-syntax on
-colorscheme acme
+syntax off
 
 "misc
 set nu
