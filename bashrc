@@ -1,7 +1,7 @@
 alias ip1='dig whoami.cloudflare ch txt @1.1.1.1 +short'
 alias unique="awk '!($0 in a){a[$0];print $0}'"
 alias du1='du -ahxd1'
-alias ls='ls -F'
+alias ls='/usr/bin/ls -F'
 
 inputcolor='\001\e[0;30m\002'
 promptcolor='\001\e[1;30m\002'
