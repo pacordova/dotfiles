@@ -8,8 +8,8 @@ $include /etc/inputrc
 #"\t": "`{sk}\C-m"
 
 # colors
-set colored-stats On
-set colored-completion-prefix On
+set colored-stats off
+set colored-completion-prefix on
 
 # for st del character
 set enable-keypad on
