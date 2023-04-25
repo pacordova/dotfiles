@@ -1,52 +1,54 @@
-//font
+/* font */
 static char *font = "CodeNewRoman Nerd Font Mono:size=15:antialias=true:autohint=false;hintstyle=3;rgba=1";
 
-/*
- * TERMINAL COLORS
- */
-
-//bg opacity
+/* bg opacity */
 unsigned int alpha = 0xdf;
 
-//colors
+/* colors */
+/* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  "#000000", // Black
-  "#f00000", // Red
-  "#448844", // Darkgreen
-  "#8b6508", // Darkgoldenrod4
-  "#000080", // Blue
-  "#ff0090", // Magenta
-  "#aaffff", // Palebluegreen
-  "#ffffff", // White
-  "#000000", // Boldblack
-  "#aa0000", // Darkred
-  "#448844", // Darkgreen
-  "#8b6508", // Darkyellow
-  "#000080", // Bright blue
-  "#ff0090", // Magenta
-  "#55aaaa", // Bright cyan
-  "#ffffea", // Paleyellow
+	/* 8 normal colors */
+	"black",
+	"red3",
+	"green3",
+	"yellow3",
+	"blue2",
+	"magenta3",
+	"#aaffff",
+	"gray90",
+
+	/* 8 bright colors */
+	"gray50",
+	"red",
+	"green",
+	"yellow",
+	"#5c5cff",
+	"magenta",
+	"cyan",
+	"white",
+
+	[255] = 0,
+
+	/* more colors can be added after 255 to use with DefaultXX */
+	"black", /* default foreground colour */
+	"#ffffea", /* default background colour */
 };
 
-unsigned int defaultfg = 0;
-unsigned int defaultbg = 15;
-unsigned int defaultcs = 0;
-unsigned int defaultrcs = 10;
 
 /*
- * Colors used, when the specific fg == defaultfg. So in reverse mode this
- * will reverse too. Another logic would only make the simple feature too
- * complex.
+ * Default colors (colorname index)
+ * foreground, background, cursor, reverse cursor
  */
-static unsigned int defaultitalic = 0;
-static unsigned int defaultunderline = 0;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+unsigned int defaultcs = 256;
+unsigned int defaultrcs = 257;
 
-
-//input lag in newer st
+/* input lag in newer st */
 static double minlatency = 1;
 static double maxlatency = 8;
 
-//tab spacing
+/* tab spacing */
 unsigned int tabspaces = 4;
 
 
