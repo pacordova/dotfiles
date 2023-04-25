@@ -9,7 +9,7 @@ $include /etc/inputrc
 
 # colors
 set colored-stats off
-set colored-completion-prefix on
+set colored-completion-prefix off
 
 # for st del character
 set enable-keypad on
