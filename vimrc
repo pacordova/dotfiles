@@ -5,19 +5,6 @@ set packpath=$HOME/.config/vim
 "pathogen
 execute pathogen#infect()
 
-"colors
-syntax off
-hi Visual     term=NONE cterm=NONE ctermfg=15 ctermbg=16
-
-" search colors
-hi IncSearch  term=NONE cterm=NONE ctermfg=15 ctermbg=16 
-hi Search     term=NONE cterm=NONE ctermfg=15 ctermbg=16
-hi ErrorMsg   term=NONE cterm=NONE ctermfg=15 ctermbg=16
-hi Error      term=NONE cterm=NONE ctermfg=15 ctermbg=16 
-hi WarningMsg term=NONE cterm=NONE ctermfg=15 ctermbg=16
-hi WildMenu   term=NONE cterm=NONE ctermfg=15 ctermbg=16
-
-
 "misc
 set nonu
 set nobackup nowritebackup
@@ -28,3 +15,9 @@ set mouse=a
 set linebreak
 
 let r_indent_align_args = 0
+
+"colors
+syntax off
+hi Visual     term=NONE cterm=NONE ctermfg=15 ctermbg=16
+hi Search     term=NONE cterm=NONE ctermfg=15 ctermbg=16
+hi ModeMsg    term=NONE cterm=NONE ctermfg=16 ctermbg=15
