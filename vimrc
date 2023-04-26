@@ -11,7 +11,7 @@ hi Visual     term=NONE cterm=NONE ctermfg=15 ctermbg=16
 
 
 "misc
-set nu
+set nonu
 set nobackup nowritebackup
 set expandtab
 set shiftwidth=4
