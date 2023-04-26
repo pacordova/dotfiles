@@ -22,12 +22,12 @@ hi StatusLine   term=NONE cterm=NONE ctermfg=16 ctermbg=6
 hi StatusLineNC term=NONE cterm=NONE ctermfg=16 ctermbg=6
 
 " search
-hi IncSearch  term=NONE cterm=NONE ctermfg=16 ctermbg=3 
-hi Search     term=NONE cterm=NONE ctermfg=16 ctermbg=3
-hi ErrorMsg   term=NONE cterm=NONE ctermfg=16 ctermbg=3
-hi Error      term=NONE cterm=NONE ctermfg=16 ctermbg=3 
-hi WarningMsg term=NONE cterm=NONE ctermfg=16 ctermbg=3 
-hi WildMenu   term=NONE cterm=NONE ctermfg=16 ctermbg=3 
+hi IncSearch  term=NONE cterm=NONE ctermfg=16 ctermbg=0 
+hi Search     term=NONE cterm=NONE ctermfg=16 ctermbg=0
+hi ErrorMsg   term=NONE cterm=NONE ctermfg=16 ctermbg=0
+hi Error      term=NONE cterm=NONE ctermfg=16 ctermbg=0 
+hi WarningMsg term=NONE cterm=NONE ctermfg=16 ctermbg=0 
+hi WildMenu   term=NONE cterm=NONE ctermfg=16 ctermbg=0 
 
 " misc
 hi Visual     term=NONE cterm=NONE ctermfg=15 ctermbg=16
