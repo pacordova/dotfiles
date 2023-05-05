@@ -1,5 +1,5 @@
 /* font */
-static char *font = "Go Mono:style:Regular:size=12:antialias=true:autohint=false;hintstyle=3;rgba=1";
+static char *font = "Go Mono:size=12";
 
 /* bg opacity */
 unsigned int alpha = 0xdf;
