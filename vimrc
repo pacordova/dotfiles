@@ -18,6 +18,6 @@ let r_indent_align_args = 0
 
 "colors
 syntax off
-hi Visual     term=NONE cterm=NONE ctermfg=15 ctermbg=16
-hi Search     term=NONE cterm=NONE ctermfg=15 ctermbg=16
-hi ModeMsg    term=NONE cterm=NONE ctermfg=16 ctermbg=15
+hi Visual     ctermfg=15 ctermbg=black
+hi Search     ctermfg=black ctermbg=6
+hi ModeMsg    cterm=NONE ctermfg=black ctermbg=15
