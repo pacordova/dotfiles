@@ -21,15 +21,15 @@ static const char *colorname[] = {
   "red",
   "green",
   "yellow",
-  "5c5cff",
+  "#5c5cff",
   "magenta",
-  "#cyan",
+  "cyan",
   "white",
 
   [255] = 0,
 
-  "black",
   "#ffffea",
+  "black",
   "gray90",
   "black"
 };
