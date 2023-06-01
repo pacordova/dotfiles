@@ -4,39 +4,51 @@ static char *font = "Go Mono:size=12";
 /* bg opacity */
 unsigned int alpha = 0xdf;
 
-/* colors */
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"darkgreen",
-	"black",
-	"blue2",
-	"magenta3",
-	"#aaffff",
-	"black",
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"black",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"#ffffea",
+  /* 8 normal colors */
+  [0] = "#424242", /* black   */
+  [1] = "#b85c57", /* red     */
+  [2] = "#57864e", /* green   */
+  [3] = "#8f7734", /* yellow  */
+  [4] = "#2a8dc5", /* blue    */
+  [5] = "#8888c7", /* magenta */
+  [6] = "#6aa7a8", /* cyan    */
+  [7] = "#999957", /* white   */
+
+  /* 8 bright colors */
+  [8]  = "#eeeea7", /* black   */
+  [9]  = "#f2acaa", /* red     */
+  [10] = "#98ce8f", /* green   */
+  [11] = "#b7b19c", /* yellow  */
+  [12] = "#a6dcf8", /* blue    */
+  [13] = "#d0d1f7", /* magenta */
+  [14] = "#b0eced", /* cyan    */
+  [15] = "#ffffec", /* white   */
+
+  /* special colors */
+  [256] = "#ffffec", /* background */
+  [257] = "#424242", /* foreground */
 };
-
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+ * foreground, background, cursor
  */
-unsigned int defaultfg = 0;
-unsigned int defaultbg = 15;
-unsigned int defaultcs = 0;
-unsigned int defaultrcs = 15;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+unsigned int defaultcs = 257;
+unsigned int defaultrcs = 256;
+
+
+/*
+ * Colors used, when the specific fg == defaultfg. So in reverse mode this
+ * will reverse too. Another logic would only make the simple feature too
+ * complex.
+ */
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
 
 /* input lag in newer st */
 static double minlatency = 1;
