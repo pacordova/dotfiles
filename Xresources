@@ -1,0 +1,6 @@
+UXTerm.termName: xterm-256color
+UXTerm.vt100.locale: true
+UXTerm.vt100.faceName: Go Mono:size=12:antialias=true
+*.background: #ffffea
+*.color6: #aaffff
+UXTerm*geometry: 80x30
