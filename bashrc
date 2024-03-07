@@ -11,7 +11,7 @@ export LANG="en_US.UTF-8"
 export PAGER=less
 export PATH=$HOME/.local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PREFIX=$HOME/.local
-export PS1="\u039b "
+export PS1=$'\u03bb\u0020'
 export TERM=st-256color
 export VISUAL=vim
 
