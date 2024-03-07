@@ -1,23 +1,19 @@
-"init
-set runtimepath=$HOME/.config/vim,/usr/share/vim/vim90
-set packpath=$HOME/.config/vim
-
-"pathogen
-execute pathogen#infect()
-
 "misc
 set nonu
-set nobackup nowritebackup
 set expandtab
 set shiftwidth=4
 set tabstop=4
-set mouse=a
-set linebreak
 
-let r_indent_align_args = 0
+"scrolling
+set mouse=a
+
+"diable syntax if it exists
+if exists('syntax')
+    syntax off
+endif
 
 "colors
-syntax off
 hi Visual  cterm=reverse
 hi Search  ctermfg=black ctermbg=6
 hi ModeMsg cterm=NONE ctermfg=black ctermbg=15
+hi LineNr  ctermfg=black
