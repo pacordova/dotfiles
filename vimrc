@@ -8,9 +8,7 @@ set tabstop=4
 set mouse=a
 
 "diable syntax if it exists
-if exists('syntax')
-    syntax off
-endif
+syntax off
 
 "colors
 hi Visual  cterm=reverse
