@@ -8,4 +8,4 @@ uninstall:
 	rm -f ${HOME}/.bashrc ${HOME}/.vimrc ${HOME}/.inputrc ${HOME}/.xinitrc
 
 clean:
-	rm -f *~ .*~
+	find . -name '*~' -delete

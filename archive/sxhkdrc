@@ -1,0 +1,40 @@
+# terminal emulator
+super + shift + Return
+    st -e tmux attach
+
+# program launcher
+super + p
+    dmenu_run -fn 'Code New Roman-12' -l 10
+
+# close and kill
+super + shift + c
+	bspc node -c
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# focus the node in the given direction
+super + {h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# resize
+super + shift + h
+    bspc node -z left -10 0 || bspc node -z right 10
+
+super + shift + j
+    bspc node -z bottom 0 10 || bspc node -z top 0 -10
+
+super + shift + k
+    bspc node -z bottom 0 -10 || bspc node -z top 0 10
+
+super + shift + l
+    bspc node -z left 10 0 || bspc node -z right -10
+
+# rotate hsplit to vsplit
+super + shift + space
+    bspc node @parent -R 90
