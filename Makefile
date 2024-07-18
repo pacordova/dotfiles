@@ -4,10 +4,11 @@ FIREFOX=$(HOME)/.mozilla/firefox/*.dev-edition-default
 all:
 
 install:
-	install bashrc $(HOME)/.bashrc
 	install vimrc $(HOME)/.vimrc
 	install inputrc $(HOME)/.inputrc
 	install xinitrc $(HOME)/.xinitrc
+	install bashrc $(HOME)/.bashrc
+	ln -sf .bashrc $(HOME)/.bash_profile
 	#pkill firefox && rm -f $(FIREFOX)/* && install user.js $(FIREFOX)
 
 uninstall:
