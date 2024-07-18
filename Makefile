@@ -1,6 +1,8 @@
 FIREFOX=$(HOME)/.mozilla/firefox/*.dev-edition-default
 #FIREFOX=$(HOME)/.mozilla/firefox/*.default-release
 
+all:
+
 install:
 	install bashrc $(HOME)/.bashrc
 	install vimrc $(HOME)/.vimrc
