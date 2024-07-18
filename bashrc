@@ -1,21 +1,11 @@
 alias uniq="awk '!($0 in a){a[$0];print $0}'"
-alias du="du -ahxd1 | sort -h"
 alias ls="/usr/bin/ls -F"
+alias gpg="gpg2 --keyserver hkp://keyserver.ubuntu.com/ "
 
-# environment
-export CFLAGS="-pipe -O2 -fstack-protector-strong -fcommon -pipe" 
-export CXXFLAGS=$CFLAGS
-export EDITOR=vim
-export LANG="en_US.UTF-8"
-#export LESS=eFRX
+export LESS=eFRX
 export PAGER=less
 export PATH=$HOME/.local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-export PREFIX=$HOME/.local
 export PS1=$'\u03bb\u0020'
-export TERM=st-256color
-export VISUAL=vim
+export TERM=st
 
-if [[ '/dev/tty1' = `tty` ]]
-then
-    xinit && logout
-fi
+[ '/dev/tty1' = `tty` ] && startx && logout
