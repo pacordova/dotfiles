@@ -9,7 +9,9 @@ install:
 	install xinitrc $(HOME)/.xinitrc
 	install bashrc $(HOME)/.bashrc
 	ln -sf .bashrc $(HOME)/.bash_profile
-	#pkill firefox && rm -fr $(FIREFOX)/* && install user.js $(FIREFOX)
+	pkill firefox || true
+	rm -fr $(FIREFOX)/* 
+	install user.js $(FIREFOX)
 
 uninstall:
 	rm -f ${HOME}/.bashrc 
