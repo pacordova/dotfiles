@@ -3,13 +3,15 @@ FIREFOX=$(HOME)/.mozilla/firefox/*.dev-edition-default
 
 all:
 
-install:
+install: install-firefox
 	install vimrc $(HOME)/.vimrc
 	install inputrc $(HOME)/.inputrc
 	install xinitrc $(HOME)/.xinitrc
 	install bashrc $(HOME)/.bashrc
 	ln -sf .bashrc $(HOME)/.bash_profile
-	pkill firefox || true
+
+install-firefox:
+	if test `pgrep firefox`; then pkill firefox; fi
 	rm -fr $(FIREFOX)/* 
 	install user.js $(FIREFOX)
 
