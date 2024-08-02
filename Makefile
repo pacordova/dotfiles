@@ -1,21 +1,22 @@
-FIREFOX=$(HOME)/.mozilla/firefox/*.dev-edition-default
-
 all:
 
-install: install-firefox
-	install vimrc $(HOME)/.vimrc
-	install inputrc $(HOME)/.inputrc
-	install xinitrc $(HOME)/.xinitrc
-	install bashrc $(HOME)/.bashrc
-	ln -sf .bashrc $(HOME)/.bash_profile
+install: install-user-dirs
+	for f in *rc; do install -m755 $$f ~/.$$f; done
+	ln -sf .bashrc ~/.bash_profile
+
+install-user-dirs:
+	install -dm755 ~/{dox,download,music,image,video}
+	install  -m644 user-dirs.dirs ~/.config
+	xdg-user-dirs-update
 
 install-firefox:
 	pkill firefox
-	rm -fr $(FIREFOX)/* 
-	install user.js $(FIREFOX)
+	rm -fr ~/.mozilla/firefox/*.dev-edition-default/*
+	install user.js ~/.mozilla/firefox/*.dev-edition-default/
+	rm -fr ~/Downloads
 
 uninstall:
-	rm -f $(HOME)/.{bashrc,vimrc,inputrc,xinitrc}
+	rm -f $(prefix)/.{bashrc,vimrc,inputrc,xinitrc}
 
 clean:
 	find . -name \*~ -delete
