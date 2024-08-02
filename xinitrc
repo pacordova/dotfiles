@@ -1,4 +1,4 @@
 #!/bin/sh
 
-picom -f -b -D 2 --backend glx --vsync &
+picom -b -f -D 2 --legacy-backends &
 /usr/bin/startxfce4
