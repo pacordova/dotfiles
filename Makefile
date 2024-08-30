@@ -1,5 +1,3 @@
-all:
-
 install: install-user-dirs
 	for f in *rc; do install -m755 $$f ~/.$$f; done
 	ln -sf .bashrc ~/.bash_profile
@@ -12,8 +10,7 @@ install-user-dirs:
 install-firefox:
 	pkill firefox
 	rm -fr ~/.mozilla/firefox/*.dev-edition-default/*
-	install user.js ~/.mozilla/firefox/*.dev-edition-default/
-	rm -fr ~/Downloads
+	install user.js ~/.mozilla/firefox/*.dev-edition-default
 
 uninstall:
 	rm -f $(prefix)/.{bashrc,vimrc,inputrc,xinitrc}
