@@ -9,8 +9,8 @@ install-user-dirs:
 
 install-firefox:
 	pkill firefox
-	rm -fr ~/.mozilla/firefox/*.dev-edition-default/*
-	install user.js ~/.mozilla/firefox/*.dev-edition-default
+	rm -fr ~/.mozilla/firefox/*.default-release/* ~/.cache/mozilla
+	install user.js ~/.mozilla/firefox/*.default-release
 
 uninstall:
 	rm -f $(prefix)/.{bashrc,vimrc,inputrc,xinitrc}
