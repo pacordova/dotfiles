@@ -10,8 +10,6 @@ export PROMPT_DIRTRIM=2
 export XDG_DATA_DIRS=/var/lib/flatpak/exports/share:/usr/share
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
-mkdir -p "$XDG_RUNTIME_DIR"
-chmod 0700 "$XDG_RUNTIME_DIR"
 
 # Misc
 #export LESS=eFRX
