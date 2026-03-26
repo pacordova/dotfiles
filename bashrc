@@ -17,7 +17,7 @@ export XDG_RUNTIME_DIR=/run/user/$(id -u)
 export TERM=st
 export MOZ_ENABLE_WAYLAND=0
 export NO_AT_BRIDGE=1
-export GTK_CSD=0
+#export GTK_CSD=0
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
