@@ -1,0 +1,17 @@
+alias ls='ls -F'
+
+TERM=st
+PROMPT_DIRTRIM=2
+PS1='\u@\h \w \$ '
+PATH=\
+$HOME/.TinyTex/bin/x86_64-linux:\
+$HOME/.local/bin:\
+$PATH
+
+export TERM PROMPT_DIRTRIM PS1 PATH
+
+XDG_CONFIG_HOME=$HOME/.config
+XCURSOR_THEME=Adwaita
+XCURSOR_SIZE=16
+
+export XDG_CONFIG_HOME XCURSOR_THEME XCURSOR_SIZE

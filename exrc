@@ -1,0 +1,10 @@
+set bf
+set bse
+set escapetime=1
+set keytime=1
+set leftright
+set matchtime=1
+set nu
+set ruler
+set showmode
+set smd
